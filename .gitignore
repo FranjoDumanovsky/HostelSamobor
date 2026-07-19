@@ -1,0 +1,10 @@
+# Secrets — real SMTP credentials live here, never commit
+php/mail-config.php
+
+# OS / editor cruft
+.DS_Store
+Thumbs.db
+*.log
+
+# Superpowers scratch
+.superpowers/

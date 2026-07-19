@@ -1,0 +1,9 @@
+# Block direct HTTP access to library and config files.
+# send.php includes them from the filesystem, which this does not affect.
+<IfModule mod_authz_core.c>
+  Require all denied
+</IfModule>
+<IfModule !mod_authz_core.c>
+  Order deny,allow
+  Deny from all
+</IfModule>

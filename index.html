@@ -1,0 +1,497 @@
+<!DOCTYPE html>
+<html lang="hr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Hostel Samobor — Smještaj u srcu Samobora</title>
+<meta name="description" content="Hostel Samobor — povoljan smještaj u centru Samobora. Sobe s 2, 4, 6 i 10 ležajeva, aktivnosti i događanja u Samoboru.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400..700;1,9..144,400..700&family=Karla:wght@400;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/swiper-bundle.min.css">
+<link rel="stylesheet" href="css/style.css">
+<script src="js/carousel.js" defer></script>
+<script src="js/swiper-bundle.min.js" defer></script>
+<script src="js/showcase.js" defer></script>
+<script src="js/lenis.min.js" defer></script>
+<script src="js/smooth-scroll.js" defer></script>
+<script src="js/nav.js" defer></script>
+<script src="js/lightbox.js" defer></script>
+</head>
+<body>
+
+<a class="skip-link" href="#glavno">Preskoči na sadržaj</a>
+
+<header class="site-header">
+  <div class="wrap">
+    <a class="brand" href="#"><img src="images/logo.png" width="183" height="45" alt="Hostel Samobor"></a>
+    <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="main-nav" aria-label="Izbornik"><span class="nav-toggle-bar"></span><span class="nav-toggle-bar"></span><span class="nav-toggle-bar"></span></button>
+    <nav id="main-nav" class="main-nav" aria-label="Glavna navigacija">
+      <a href="#galerija">Galerija</a>
+      <a href="#dogadanja">Događanja</a>
+      <a href="#aktivnosti">Aktivnosti</a>
+      <a href="#usluge">Usluge</a>
+      <a href="#kontakt">Kontakt</a>
+      <div class="lang-switch"><a href="en.html" lang="en" hreflang="en">EN</a><span class="lang-sep" aria-hidden="true">/</span><span class="lang-current" lang="hr">HR</span></div>
+    </nav>
+  </div>
+</header>
+
+<div class="hero" data-hero role="region" aria-roledescription="vrtuljak" aria-label="Fotografije hostela i Samobora">
+  <div class="hero-slide is-active" aria-hidden="false">
+    <img src="images/gal-vanjstina.jpg" width="800" height="533" alt="Zgrada Hostela Samobor na uličnom uglu sa žutim pročeljima" fetchpriority="high">
+  </div>
+  <div class="hero-slide" aria-hidden="true">
+    <img data-src="images/hero.jpg" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" width="1896" height="990" alt="Glavni trg u Samoboru s terasama kafića i crvenim krovovima" loading="lazy">
+  </div>
+  <div class="hero-slide" aria-hidden="true">
+    <img data-src="images/potkrovlje.jpg" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" width="800" height="1200" alt="Spavaonica u potkrovlju s krevetima na kat" loading="lazy">
+  </div>
+  <div class="hero-slide" aria-hidden="true">
+    <img data-src="images/blagovaonica.jpg" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" width="800" height="533" alt="Blagovaonica sa zelenim zidovima i okruglim stolovima" loading="lazy">
+  </div>
+  <div class="hero-slide" aria-hidden="true">
+    <img data-src="images/akt-biciklizam.jpg" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" width="800" height="533" alt="Biciklist na šumskoj stazi u Samoborskom gorju" loading="lazy">
+  </div>
+
+  <div class="hero-text">
+    <div class="wrap">
+      <h1>Prenoćite u <em>srcu</em> Samobora</h1>
+      <p>Povoljan smještaj na dvije minute od glavnog trga — kremšnite, fašnik, gorje i Zagreb nadohvat ruke.</p>
+      <a class="hero-cta" href="#kontakt">Rezerviraj smještaj</a>
+    </div>
+  </div>
+
+  <div class="hero-controls">
+    <button class="car-btn" data-dir="-1" aria-label="Prethodna fotografija">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m15 18-6-6 6-6"/></svg>
+    </button>
+    <div class="hero-dots" role="group" aria-label="Odabir fotografije">
+      <button data-slide="0" aria-current="true" aria-label="Fotografija 1: vanjština hostela"></button>
+      <button data-slide="1" aria-current="false" aria-label="Fotografija 2: glavni trg"></button>
+      <button data-slide="2" aria-current="false" aria-label="Fotografija 3: spavaonica u potkrovlju"></button>
+      <button data-slide="3" aria-current="false" aria-label="Fotografija 4: blagovaonica"></button>
+      <button data-slide="4" aria-current="false" aria-label="Fotografija 5: biciklizam"></button>
+    </div>
+    <button class="car-btn" data-dir="1" aria-label="Sljedeća fotografija">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m9 18 6-6-6-6"/></svg>
+    </button>
+  </div>
+</div>
+
+<main id="glavno">
+
+<div class="intro-strip">
+  <div class="wrap">
+    <p class="intro-line">Mali hostel u malom kraljevskom gradu — dvije minute od glavnog trga.</p>
+    <ul class="intro-facts">
+      <li>
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0"/><circle cx="12" cy="10" r="3"/></svg>
+        U centru Samobora
+      </li>
+      <li>
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12.586 2.586A2 2 0 0 0 11.172 2H4a2 2 0 0 0-2 2v7.172a2 2 0 0 0 .586 1.414l8.704 8.704a2.426 2.426 0 0 0 3.42 0l6.58-6.58a2.426 2.426 0 0 0 0-3.42z"/><circle cx="7.5" cy="7.5" r=".5" fill="currentColor"/></svg>
+        Od 20 € / noć
+      </li>
+      <li>
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 20h.01"/><path d="M2 8.82a15 15 0 0 1 20 0"/><path d="M5 12.859a10 10 0 0 1 14 0"/><path d="M8.5 16.429a5 5 0 0 1 7 0"/></svg>
+        Wi-Fi · kuhinja · praonica
+      </li>
+    </ul>
+  </div>
+</div>
+
+<section id="smjestaj">
+  <div class="wrap">
+    <p class="eyebrow">Smještaj</p>
+    <h2 class="section-title">Sobe i spavaonice</h2>
+
+    <div class="split">
+      <div class="split-photo">
+        <img src="images/potkrovlje.jpg" width="800" height="1200" alt="Spavaonica u potkrovlju s krevetima na kat i drvenim stropom" loading="lazy">
+      </div>
+      <div class="split-copy">
+        <p>Spavaonice su opremljene novim, visoko kvalitetnim krevetima i ormarima. Hostel također omogućuje bežični pristup internetu. Prvi kat sadrži praonicu rublja, kuhinju i dnevni boravak sa 60 stolica, TV i klima uređaj.</p>
+        <div class="note-box">
+          <strong>Mjesečni najam ležaja</strong>
+          Hostel nudi mogućnost najma 1 ležaja za 250,00 € mjesečno.
+        </div>
+        <div class="note-box">
+          <strong>Rezervacije</strong>
+          Nazovite <a href="tel:+385913323091">+385 91 3323 091</a> (0–24 h) ili pišite na
+          <a href="mailto:hostel.samobor@gmail.com">hostel.samobor@gmail.com</a>.
+        </div>
+      </div>
+    </div>
+
+    <div class="room-options">
+      <div class="room-card">
+        <img src="images/spavaonica.jpg" width="800" height="533" alt="Spavaonica s krevetima na kat" loading="lazy">
+        <div class="room-body">
+          <p class="beds">1<small>krevet</small></p>
+          <h3>Krevet za 1 osobu u spavaonici</h3>
+          <p class="price">20 € <span>/ noć</span></p>
+        </div>
+      </div>
+      <div class="room-card">
+        <img src="images/soba-2.jpg" width="800" height="533" alt="Privatna soba u potkrovlju" loading="lazy">
+        <div class="room-body">
+          <p class="beds">1<small>soba</small></p>
+          <h3>Cijela soba samo za vas</h3>
+          <p class="price">50 € <span>/ noć</span></p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="galerija" class="band-dark">
+  <div class="wrap">
+    <div class="car-head">
+      <div>
+        <p class="eyebrow">Galerija</p>
+        <h2 class="section-title">Zavirite u hostel</h2>
+      </div>
+      <div class="car-nav">
+        <button class="car-btn" data-dir="-1" aria-label="Prethodna fotografija">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m15 18-6-6 6-6"/></svg>
+        </button>
+        <button class="car-btn" data-dir="1" aria-label="Sljedeća fotografija">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m9 18 6-6-6-6"/></svg>
+        </button>
+      </div>
+    </div>
+  </div>
+  <div class="wrap carousel" data-carousel>
+    <div class="car-track" data-lenis-prevent role="region" aria-label="Galerija fotografija hostela" tabindex="0">
+      <figure class="gallery-item">
+        <img src="images/gal-vanjstina.jpg" width="800" height="533" alt="Ulica ispred hostela s natpisom Hostel Samobor" loading="lazy">
+        <figcaption>Hostel u centru Samobora</figcaption>
+      </figure>
+      <figure class="gallery-item">
+        <img src="images/blagovaonica.jpg" width="800" height="533" alt="Blagovaonica sa zelenim zidovima i okruglim stolovima" loading="lazy">
+        <figcaption>Blagovaonica</figcaption>
+      </figure>
+      <figure class="gallery-item">
+        <img src="images/gal-stubiste.jpg" width="800" height="533" alt="Svijetlo stubište sa žutim rukohvatima i fotografijama na zidu" loading="lazy">
+        <figcaption>Stubište</figcaption>
+      </figure>
+      <figure class="gallery-item">
+        <img src="images/gal-soba.jpg" width="800" height="1200" alt="Četverokrevetna spavaonica u potkrovlju" loading="lazy">
+        <figcaption>Spavaonica</figcaption>
+      </figure>
+      <figure class="gallery-item">
+        <img src="images/gal-hodnik.jpg" width="800" height="533" alt="Hodnik sa sobama i parketom" loading="lazy">
+        <figcaption>Hodnik</figcaption>
+      </figure>
+      <figure class="gallery-item">
+        <img src="images/gal-kuhinja.jpg" width="800" height="533" alt="Zajednička kuhinja s plavim elementima" loading="lazy">
+        <figcaption>Kuhinja</figcaption>
+      </figure>
+      <figure class="gallery-item">
+        <img src="images/spavaonica.jpg" width="800" height="533" alt="Spavaonica s narančastim krevetima na kat" loading="lazy">
+        <figcaption>Spavaonica</figcaption>
+      </figure>
+      <figure class="gallery-item">
+        <img src="images/gal-ormarici.jpg" width="800" height="1200" alt="Krevet na kat s ormarićem za stvari" loading="lazy">
+        <figcaption>Ormarići u sobi</figcaption>
+      </figure>
+      <figure class="gallery-item">
+        <img src="images/gal-kupaonica.jpg" width="800" height="533" alt="Kupaonica s umivaonicima, ogledalom i tuševima" loading="lazy">
+        <figcaption>Kupaonica</figcaption>
+      </figure>
+      <figure class="gallery-item">
+        <img src="images/potkrovlje-kreveti.jpg" width="800" height="533" alt="Kreveti u potkrovlju uz krovni prozor" loading="lazy">
+        <figcaption>Potkrovlje</figcaption>
+      </figure>
+    </div>
+  </div>
+</section>
+
+<section id="dogadanja">
+  <div class="wrap">
+    <div class="car-head">
+      <div>
+        <p class="eyebrow">Događanja</p>
+        <h2 class="section-title">Što se događa u Samoboru</h2>
+        <p class="section-intro">Pregled svih važnih događaja u gradu Samoboru i okolici.</p>
+      </div>
+      <div class="car-nav">
+        <button class="car-btn" data-dir="-1" aria-label="Prethodno događanje">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m15 18-6-6 6-6"/></svg>
+        </button>
+        <button class="car-btn" data-dir="1" aria-label="Sljedeće događanje">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m9 18 6-6-6-6"/></svg>
+        </button>
+      </div>
+    </div>
+  </div>
+  <div class="wrap showcase">
+    <div class="swiper">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide">
+          <article class="show-card">
+            <img src="images/event-fasnik.jpg" width="800" height="533" alt="Maskirani sudionici Samoborskog fašnika" loading="lazy">
+            <div class="show-overlay">
+              <p class="when">Kraj veljače</p>
+              <h3>Samoborski fašnik</h3>
+              <p class="excerpt">Svake godine krajem mjeseca veljače počinje najpoznatiji događaj u gradu - Samoborski fašnik. Jedna od najstarijih i najvećih pokladnih svečanosti u kontinentalnom dijelu Hrvatske.</p>
+              <a class="btn-more" href="fasnik.html">Saznajte više</a>
+            </div>
+          </article>
+        </div>
+
+        <div class="swiper-slide">
+          <article class="show-card">
+            <img src="images/event-bitka.jpg" width="800" height="533" alt="Vitezovi u oklopima na rekonstrukciji Bitke kod Samobora" loading="lazy">
+            <div class="show-overlay">
+              <p class="when">1. ožujka</p>
+              <h3>Bitka kod Samobora</h3>
+              <p class="excerpt">Svakog prvog u mjesecu ožujku park Vugrinščak pretvara se u viteški vojni tabor s konjanicima, mačevaocima, oklopljenim vitezovima, kuburašima, bojnim spravama i katapultima.</p>
+              <a class="btn-more" href="bitka.html">Saznajte više</a>
+            </div>
+          </article>
+        </div>
+
+        <div class="swiper-slide">
+          <article class="show-card">
+            <img src="images/event-greblica.jpg" width="800" height="533" alt="Rudarska greblica, tradicionalni kolač sa sirom" loading="lazy">
+            <div class="show-overlay">
+              <p class="when">Prvi vikend u srpnju</p>
+              <h3>Dani rudarske greblice</h3>
+              <p class="excerpt">Dani rudarske greblice tradicionalno se održavaju prvog vikenda u sedmom mjesecu, a manifestacija je posvećena rudarskom kolaču - rudarskoj greblici.</p>
+              <a class="btn-more" href="greblica.html">Saznajte više</a>
+            </div>
+          </article>
+        </div>
+
+        <div class="swiper-slide">
+          <article class="show-card">
+            <img src="images/event-dan-grada.jpg" width="800" height="533" alt="Povorka na Dan grada Samobora" loading="lazy">
+            <div class="show-overlay">
+              <p class="when">Treći vikend u listopadu</p>
+              <h3>Dan grada Samobora</h3>
+              <p class="excerpt">Dan grada Samobora obilježava se trećeg vikenda u mjesecu listopadu, a traje puna četiri dana. Povjesničari procjenjuju kako je 1242. godine kralj Bela IV. Samoboru darovao Povelju slobodnog kraljevskog trgovišta.</p>
+              <a class="btn-more" href="dan-grada.html">Saznajte više</a>
+            </div>
+          </article>
+        </div>
+
+        <div class="swiper-slide">
+          <article class="show-card">
+            <img src="images/event-salamijada.jpg" width="800" height="533" alt="Narezana samoborska salama" loading="lazy">
+            <div class="show-overlay">
+              <p class="when">Međunarodna manifestacija</p>
+              <h3>Samoborska salamijada</h3>
+              <p class="excerpt">Spravljanje salama, češnjovki i drugih suhomesnatih proizvoda velika je samoborska tradicija koju njeguje svaka obitelj u prekrasnom malom gradiću.</p>
+              <a class="btn-more" href="salamijada.html">Saznajte više</a>
+            </div>
+          </article>
+        </div>
+      </div>
+      <div class="swiper-pagination"></div>
+    </div>
+  </div>
+</section>
+
+<section id="aktivnosti" class="band-cream">
+  <div class="wrap">
+    <div class="car-head">
+      <div>
+        <p class="eyebrow">Aktivnosti</p>
+        <h2 class="section-title">Što raditi u Samoboru i okolici</h2>
+        <p class="section-intro">Saznajte što sve možete raditi u Samoboru i okolici.</p>
+      </div>
+      <div class="car-nav">
+        <button class="car-btn" data-dir="-1" aria-label="Prethodna aktivnost">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m15 18-6-6 6-6"/></svg>
+        </button>
+        <button class="car-btn" data-dir="1" aria-label="Sljedeća aktivnost">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m9 18 6-6-6-6"/></svg>
+        </button>
+      </div>
+    </div>
+  </div>
+  <div class="wrap showcase">
+    <div class="swiper">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide">
+          <article class="show-card">
+            <img src="images/akt-planinarenje.jpg" width="800" height="533" alt="Zeleni obronci Samoborskog gorja" loading="lazy">
+            <div class="show-overlay">
+              <h3>Planinarenje</h3>
+              <p class="excerpt">Ukoliko ste veliki ljubitelj planinarenja i volite istraživati prirodu tada je grad Samobor pravo mjesto za to. Samoborsko gorje i Žumberak isprepleteni su mrežom planinarskih putova.</p>
+              <a class="btn-more" href="planinarenje.html">Saznajte više</a>
+            </div>
+          </article>
+        </div>
+
+        <div class="swiper-slide">
+          <article class="show-card">
+            <img src="images/akt-biciklizam.jpg" width="800" height="533" alt="Biciklist na šumskoj stazi" loading="lazy">
+            <div class="show-overlay">
+              <h3>Biciklizam</h3>
+              <p class="excerpt">Samobor je poznat i po biciklističkim stazama koje su organizirane i označene brojevima od 1 do 4. Samoborsko gorje odlična je lokacija za brdski biciklizam.</p>
+              <a class="btn-more" href="biciklizam.html">Saznajte više</a>
+            </div>
+          </article>
+        </div>
+
+        <div class="swiper-slide">
+          <article class="show-card">
+            <img src="images/akt-jahanje.jpg" width="800" height="533" alt="Konj na livadi" loading="lazy">
+            <div class="show-overlay">
+              <h3>Jahanje</h3>
+              <p class="excerpt">Ukoliko ste veliki ljubitelj konja i volite jahati, naš mali gradić nudi vam i tu aktivnost. Dolina Molvice pravo je mjesto za vas — nije vam potrebno nikakvo znanje, samo volja.</p>
+              <a class="btn-more" href="jahanje.html">Saznajte više</a>
+            </div>
+          </article>
+        </div>
+
+        <div class="swiper-slide">
+          <article class="show-card">
+            <img src="images/akt-motori.jpg" width="800" height="533" alt="Motociklist na cesti" loading="lazy">
+            <div class="show-overlay">
+              <h3>Vožnja motorima</h3>
+              <p class="excerpt">Grad Samobor krije neopisivu ljepotu. Ovaj mali samozatajni gradić možete doživjeti i razgledati na brojne načine, a među njima i moto turama.</p>
+              <a class="btn-more" href="motori.html">Saznajte više</a>
+            </div>
+          </article>
+        </div>
+
+        <div class="swiper-slide">
+          <article class="show-card">
+            <img src="images/akt-strelicarstvo.jpg" width="800" height="533" alt="Streličar gađa metu" loading="lazy">
+            <div class="show-overlay">
+              <h3>Streličarstvo</h3>
+              <p class="excerpt">Samoborci i svi gosti ovog prekrasnog malog grada dobili su priliku uživati u još jednom sportu - streličarstvu. Streličarski klub Samobor osnovan je prije deset godina.</p>
+              <a class="btn-more" href="strelicarstvo.html">Saznajte više</a>
+            </div>
+          </article>
+        </div>
+      </div>
+      <div class="swiper-pagination"></div>
+    </div>
+  </div>
+</section>
+
+<section id="usluge">
+  <div class="wrap">
+    <p class="eyebrow">Usluge</p>
+    <h2 class="section-title">Naše usluge</h2>
+    <p class="section-intro">Pored smještaja u hostelu nudimo i najam kombija i kampera te dodatan smještaj u Sobama Medved.</p>
+
+    <div class="service-grid">
+      <a class="service-card" href="https://kombi-samobor.com/hr/" target="_blank" rel="noopener">
+        <img src="images/usluga-kombi.jpg" width="1280" height="960" alt="Bijeli kombi Ford Transit Custom" loading="lazy">
+        <span class="service-overlay">
+          <span class="kicker">Najam kombija</span>
+          <h3>Rent Kombi</h3>
+        </span>
+      </a>
+      <a class="service-card" href="https://camper-samobor.com/" target="_blank" rel="noopener">
+        <img src="images/usluga-kamper.jpg" width="1620" height="1080" alt="Unutrašnjost kampera sa sjedećom garniturom i stolom" loading="lazy">
+        <span class="service-overlay">
+          <span class="kicker">Najam kampera</span>
+          <h3>Rent Kamper</h3>
+        </span>
+      </a>
+      <a class="service-card" href="https://www.sobe-samobor.biz/" target="_blank" rel="noopener">
+        <img src="images/usluga-sobe-medved.jpg" width="500" height="333" alt="Kuća Sobe Medved u Samoboru" loading="lazy">
+        <span class="service-overlay">
+          <span class="kicker">Smještaj</span>
+          <h3>Sobe Medved</h3>
+        </span>
+      </a>
+    </div>
+  </div>
+</section>
+
+<section id="kontakt" class="band-cream">
+  <div class="wrap">
+    <p class="eyebrow">Kontakt</p>
+    <h2 class="section-title">Rezervacije i upiti</h2>
+    <p class="section-intro">Dostupni smo 0–24 h. Javite nam se telefonom ili e-mailom.</p>
+
+    <p class="form-status" id="form-status" hidden role="status"></p>
+
+    <div class="contact-layout">
+    <form class="contact-form" action="send.php" method="post">
+      <input type="hidden" name="lang" value="hr">
+      <p class="hp" aria-hidden="true">
+        <label>Ne ispunjavajte ovo polje: <input type="text" name="website" tabindex="-1" autocomplete="off"></label>
+      </p>
+      <div class="form-grid">
+        <p class="form-field">
+          <label for="cf-name">Ime i prezime *</label>
+          <input id="cf-name" type="text" name="name" required maxlength="100" autocomplete="name">
+        </p>
+        <p class="form-field">
+          <label for="cf-email">E-mail *</label>
+          <input id="cf-email" type="email" name="email" required maxlength="200" autocomplete="email">
+        </p>
+        <p class="form-field">
+          <label for="cf-phone">Telefon</label>
+          <input id="cf-phone" type="tel" name="phone" maxlength="40" autocomplete="tel">
+        </p>
+        <p class="form-field">
+          <label for="cf-guests">Broj osoba</label>
+          <input id="cf-guests" type="number" name="guests" min="1" max="60">
+        </p>
+        <p class="form-field form-field--full">
+          <label for="cf-message">Poruka *</label>
+          <textarea id="cf-message" name="message" required rows="5" maxlength="5000"></textarea>
+        </p>
+      </div>
+      <button class="hero-cta form-submit" type="submit">Pošalji upit</button>
+    </form>
+
+    <div class="contact-grid">
+      <div class="contact-card">
+        <p class="label">Mobitel · 0–24 h</p>
+        <a href="tel:+385913323091">+385 91 3323 091</a>
+      </div>
+      <div class="contact-card">
+        <p class="label">Telefon · 0–24 h</p>
+        <a href="tel:+38513374107">+385 1 3374 107</a>
+      </div>
+      <div class="contact-card">
+        <p class="label">E-mail</p>
+        <a href="mailto:hostel.samobor@gmail.com">hostel.samobor@gmail.com</a>
+      </div>
+      <div class="contact-card">
+        <p class="label">Adresa</p>
+        <a href="https://www.google.com/maps/search/?api=1&amp;query=Obrtni%C4%8Dka+34%2C+10430+Samobor" target="_blank" rel="noopener">Obrtnička 34</a>
+        <p>10430 Samobor, Hrvatska</p>
+      </div>
+    </div>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <p><strong>Hostel Samobor</strong> · Obrtnička 34, 10430 Samobor, Hrvatska</p>
+    <p><a href="tel:+385913323091">+385 91 3323 091</a> · <a href="mailto:hostel.samobor@gmail.com">hostel.samobor@gmail.com</a></p>
+  </div>
+</footer>
+
+<script>
+(function () {
+  var sent = new URLSearchParams(location.search).get('sent');
+  if (sent === null) return;
+  var el = document.getElementById('form-status');
+  if (!el) return;
+  el.hidden = false;
+  el.textContent = sent === '1'
+    ? 'Hvala! Vaš upit je poslan — javit ćemo se u najkraćem roku.'
+    : 'Slanje nije uspjelo. Pokušajte ponovno ili nas nazovite / pošaljite e-mail.';
+  el.classList.add(sent === '1' ? 'is-ok' : 'is-err');
+  history.replaceState(null, '', location.pathname + location.hash);
+})();
+</script>
+
+</body>
+</html>
