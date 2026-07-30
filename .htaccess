@@ -1,0 +1,55 @@
+# Hostel Samobor — Apache config for shared hosting.
+# Croatian shared hosts run Apache + cPanel, so this file is read automatically.
+# If the host runs nginx instead, none of this applies — ask them for the equivalent.
+
+# UTF-8 by default, otherwise Croatian diacritics (č ć š ž đ) break on some hosts.
+AddDefaultCharset UTF-8
+
+# This site is an addon domain living in a subfolder of public_html, alongside a
+# WordPress install on the primary domain. Declaring RewriteEngine On here means
+# Apache does NOT apply the parent public_html/.htaccess rewrite rules (WordPress's
+# front-controller rule) to this directory — mod_rewrite rules are replaced by the
+# child, not merged. Do not remove the rewrite block for that reason alone.
+<IfModule mod_rewrite.c>
+  RewriteEngine On
+
+  # Canonical host. Fires for www.hostel-samobor.hr, for plain HTTP, and for the
+  # addon domain's leaked path on the primary domain
+  # (https://primary-domain.hr/hostel-samobor.hr/...). $1 is the path relative to
+  # THIS directory, so the subfolder prefix is correctly dropped from the target.
+  # If the client prefers www as canonical, swap the two hostnames below.
+  RewriteCond %{HTTP_HOST} !^hostel-samobor\.hr$ [NC]
+  RewriteRule ^(.*)$ https://hostel-samobor.hr/$1 [R=301,L]
+
+  # Correct host, but over HTTP.
+  RewriteCond %{HTTPS} !=on
+  RewriteCond %{HTTP:X-Forwarded-Proto} !=https
+  RewriteRule ^(.*)$ https://hostel-samobor.hr/$1 [R=301,L]
+</IfModule>
+
+# Never serve project docs or dotfiles over HTTP.
+<FilesMatch "\.(md|sql|json|yml)$">
+  <IfModule mod_authz_core.c>
+    Require all denied
+  </IfModule>
+  <IfModule !mod_authz_core.c>
+    Order deny,allow
+    Deny from all
+  </IfModule>
+</FilesMatch>
+
+<IfModule mod_deflate.c>
+  AddOutputFilterByType DEFLATE text/html text/css text/javascript application/javascript image/svg+xml
+</IfModule>
+
+<IfModule mod_expires.c>
+  ExpiresActive On
+  # Images/fonts are content-stable; HTML must stay short so edits go live.
+  ExpiresByType image/jpeg "access plus 1 year"
+  ExpiresByType image/png "access plus 1 year"
+  ExpiresByType image/webp "access plus 1 year"
+  ExpiresByType image/svg+xml "access plus 1 year"
+  ExpiresByType text/css "access plus 1 month"
+  ExpiresByType application/javascript "access plus 1 month"
+  ExpiresByType text/html "access plus 10 minutes"
+</IfModule>
