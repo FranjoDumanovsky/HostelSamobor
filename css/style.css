@@ -926,8 +926,15 @@ section:has(.wrap.showcase) { overflow: clip; }
   .intro-facts { grid-template-columns: 1fr; max-width: 420px; }
   .intro-facts li { padding: 22px 20px; }
 
-  .split { grid-template-columns: 1fr; margin-bottom: 48px; }
-  .split-copy { margin: -48px 16px 0; padding: 28px; }
+  /* minmax(0,1fr): stop long words/links forcing the track wider than the viewport */
+  .split { grid-template-columns: minmax(0, 1fr); margin-bottom: 48px; }
+  .split-photo img {
+    height: clamp(240px, 56vw, 380px);
+    border-radius: var(--radius-card);
+  }
+  /* no overlap on mobile: copy card sits below the photo, full container width */
+  .split-copy { margin: 20px 0 0; padding: 24px; }
+  .split-copy a { overflow-wrap: anywhere; }
 
   .car-head { flex-direction: column; align-items: flex-start; gap: 0; }
   .car-head .car-nav { margin-bottom: 24px; }
