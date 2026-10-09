@@ -8,3 +8,10 @@ Thumbs.db
 
 # Superpowers scratch
 .superpowers/
+
+# cPanel-managed (MultiPHP INI Editor) — server owns these
+.user.ini
+php.ini
+
+# Temporary diagnostic — never deploy
+smtp-probe.php

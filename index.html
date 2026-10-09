@@ -3,6 +3,12 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="icon" type="image/png" href="images/favicon/favicon-96x96.png" sizes="96x96">
+<link rel="icon" type="image/svg+xml" href="images/favicon/favicon.svg">
+<link rel="shortcut icon" href="images/favicon/favicon.ico">
+<link rel="apple-touch-icon" sizes="180x180" href="images/favicon/apple-touch-icon.png">
+<link rel="manifest" href="images/favicon/site.webmanifest">
+<meta name="theme-color" content="#C2571F">
 <title>Hostel Samobor — Smještaj u srcu Samobora</title>
 <meta name="description" content="Hostel Samobor — povoljan smještaj u centru Samobora. Sobe s 2, 4, 6 i 10 ležajeva, aktivnosti i događanja u Samoboru.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -17,6 +23,7 @@
 <script src="js/smooth-scroll.js" defer></script>
 <script src="js/nav.js" defer></script>
 <script src="js/lightbox.js" defer></script>
+<script src="js/contact-form.js" defer></script>
 </head>
 <body>
 
@@ -98,6 +105,7 @@
         Wi-Fi · kuhinja · praonica
       </li>
     </ul>
+    <p class="section-note">Dugogodišnje iskustvo u radu s velikim grupama i Erasmus+ projektima.</p>
   </div>
 </div>
 
@@ -114,7 +122,7 @@
         <p>Spavaonice su opremljene novim, visoko kvalitetnim krevetima i ormarima. Hostel također omogućuje bežični pristup internetu. Prvi kat sadrži praonicu rublja, kuhinju i dnevni boravak sa 60 stolica, TV i klima uređaj.</p>
         <div class="note-box">
           <strong>Mjesečni najam ležaja</strong>
-          Hostel nudi mogućnost najma 1 ležaja za 250,00 € mjesečno.
+          Nudimo mogućnost najma 1 ležaja za 280,00 € mjesečno.
         </div>
         <div class="note-box">
           <strong>Rezervacije</strong>
@@ -126,7 +134,7 @@
 
     <div class="room-options">
       <div class="room-card">
-        <img src="images/spavaonica.jpg" width="800" height="533" alt="Spavaonica s krevetima na kat" loading="lazy">
+        <img src="images/soba-2.jpg" width="800" height="533" alt="Privatna soba u potkrovlju" loading="lazy">
         <div class="room-body">
           <p class="beds">1<small>krevet</small></p>
           <h3>Krevet za 1 osobu u spavaonici</h3>
@@ -134,7 +142,7 @@
         </div>
       </div>
       <div class="room-card">
-        <img src="images/soba-2.jpg" width="800" height="533" alt="Privatna soba u potkrovlju" loading="lazy">
+        <img src="images/spavaonica.jpg" width="800" height="533" alt="Spavaonica s krevetima na kat" loading="lazy">
         <div class="room-body">
           <p class="beds">1<small>soba</small></p>
           <h3>Cijela soba samo za vas</h3>
@@ -477,21 +485,6 @@
     <p><a href="tel:+385913323091">+385 91 3323 091</a> · <a href="mailto:hostel.samobor@gmail.com">hostel.samobor@gmail.com</a></p>
   </div>
 </footer>
-
-<script>
-(function () {
-  var sent = new URLSearchParams(location.search).get('sent');
-  if (sent === null) return;
-  var el = document.getElementById('form-status');
-  if (!el) return;
-  el.hidden = false;
-  el.textContent = sent === '1'
-    ? 'Hvala! Vaš upit je poslan — javit ćemo se u najkraćem roku.'
-    : 'Slanje nije uspjelo. Pokušajte ponovno ili nas nazovite / pošaljite e-mail.';
-  el.classList.add(sent === '1' ? 'is-ok' : 'is-err');
-  history.replaceState(null, '', location.pathname + location.hash);
-})();
-</script>
 
 </body>
 </html>

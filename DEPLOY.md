@@ -86,8 +86,8 @@ from your local copy, once, over SFTP.
 
 ## If the form fails
 
-`send.php` swallows all errors and redirects to `?sent=0`, so the browser tells
-you nothing. To see the real cause, check the host's PHP error log (cPanel →
+`send.php` swallows all errors and answers `{"ok":false}` (or, without JS,
+redirects to `?sent=0`), so the browser tells you nothing. To see the real cause, check the host's PHP error log (cPanel →
 Errors), then in order:
 
 - **Missing config** → `mail-config.php` was not uploaded (see gotcha above).

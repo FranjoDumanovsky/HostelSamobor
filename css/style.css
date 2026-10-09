@@ -474,6 +474,17 @@ section.band-dark { background: var(--pine-dark); background-image: var(--grad-p
 
 .room-card img { width: 100%; aspect-ratio: 16 / 10; object-fit: cover; }
 
+.section-note {
+  margin: 32px auto 0;
+  max-width: 46ch;
+  text-align: center;
+  font-family: var(--font-display);
+  font-style: italic;
+  font-size: 1.15rem;
+  line-height: 1.5;
+  color: var(--pine-deep);
+}
+
 .room-card .room-body { padding: 24px; }
 
 .room-card .beds {
@@ -888,12 +899,18 @@ section:has(.wrap.showcase) { overflow: clip; }
   clip-path: inset(50%);
 }
 
+/* Hidden until a submit resolves. contact-form.js unhides it, forces a reflow,
+   then adds .is-visible so the fade in (and later out) actually runs. */
 .form-status {
   margin: 0 0 24px;
   padding: 12px 16px;
   border-radius: 8px;
   font-weight: 600;
+  opacity: 0;
+  transform: translateY(-6px);
+  transition: opacity .25s ease, transform .25s ease;
 }
+.form-status.is-visible { opacity: 1; transform: none; }
 .form-status.is-ok { background: #F5EEDD; border: 1px solid #DFD2B4; color: var(--pine-deep); }
 .form-status.is-err { background: #FBEAE2; border: 1px solid #EFCBB6; color: #8A3A12; }
 

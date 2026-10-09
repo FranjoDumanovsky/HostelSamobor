@@ -2,24 +2,35 @@
 /**
  * SMTP configuration for the contact form (send.php).
  *
- * Fill these in once hosting is known:
- *  - Host's own SMTP (recommended): ask the hosting provider for host/port/user/pass.
- *  - Gmail: smtp_host 'smtp.gmail.com', port 587, secure 'tls',
- *    smtp_user 'hostel.samobor@gmail.com', smtp_pass = Google App Password
- *    (requires 2-step verification on the Google account; from_email must
- *    match smtp_user for Gmail).
+ * Primary path is Resend's HTTPS API — set api_key and send.php uses it,
+ * ignoring every smtp_* value below. Needed because hosts commonly firewall
+ * outbound SMTP; HTTPS is never blocked. from_email must sit on a domain
+ * verified in Resend.
  *
- * Leave smtp_host empty ('') to fall back to PHP's mail() — works on many
- * shared hosts with no credentials, but deliverability is usually worse.
+ * SMTP fallback options, in the order worth trying:
+ *  - Empty smtp_host: PHPMailer falls back to PHP's mail(), which hands the
+ *    message to the server's local MTA. No credentials. This is what the live
+ *    site uses — the host redirects outbound port 587 to its own Exim, so
+ *    external SMTP (Gmail, etc.) cannot be reached at all.
+ *  - Host's own SMTP: smtp_host 'localhost', port 587, secure 'none',
+ *    smtp_user/pass = a mailbox created in cPanel. 'none' because the host's
+ *    cert is issued for its hostname and will not validate as 'localhost'.
+ *  - External SMTP (Gmail App Password etc.): only on hosts that allow
+ *    outbound 587/465. Confirm before relying on it.
+ *
+ * from_email must be on the site's own domain, or SPF fails and mail lands in
+ * spam. Reply-To is set to the visitor's address by send.php.
  */
 return [
+    'api_key'     => '',
+
     'smtp_host'   => '',
     'smtp_port'   => 587,
-    'smtp_secure' => 'tls', // 'tls' (port 587) or 'ssl' (port 465)
+    'smtp_secure' => 'none', // 'tls' (587), 'ssl' (465), 'none' (localhost only)
     'smtp_user'   => '',
     'smtp_pass'   => '',
 
-    'from_email'  => 'hostel.samobor@gmail.com',
+    'from_email'  => 'web@example.com',
     'from_name'   => 'Hostel Samobor — web',
     'to_email'    => 'hostel.samobor@gmail.com',
 ];
