@@ -977,3 +977,9 @@ html.lenis, html.lenis body { height: auto; }
 .lenis.lenis-smooth { scroll-behavior: auto !important; }
 .lenis.lenis-smooth [data-lenis-prevent] { overscroll-behavior: contain; }
 .lenis.lenis-stopped { overflow: hidden; }
+
+/* ---------- Anchor price (sidrena cijena) ---------- */
+
+.anchor-price { display: block; font-size: .8rem; font-weight: 400; color: var(--ink-soft); }
+.intro-facts .anchor-price { margin-top: -10px; }
+.room-card .anchor-price { margin: 4px 0 0; }
