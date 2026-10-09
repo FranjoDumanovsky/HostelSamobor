@@ -1,46 +1,60 @@
 name: Deploy to cPanel
 
+# The host firewalls FTP and SSH, so deployment goes through the cPanel API
+# on port 2083: cPanel pulls this repo into ~/repositories/HostelSamobor, then runs
+# .cpanel.yml to copy the site files into the document root.
+
 on:
   push:
     branches: [main]
   workflow_dispatch:
-    inputs:
-      dry_run:
-        description: "Log what would change, upload nothing"
-        type: boolean
-        default: false
 
 concurrency:
   group: deploy-production
   cancel-in-progress: false
 
+env:
+  REPO_ROOT: /home/camper/repositories/HostelSamobor
+  AUTH: "Authorization: cpanel ${{ secrets.CPANEL_USER }}:${{ secrets.CPANEL_TOKEN }}"
+  API: https://${{ secrets.CPANEL_HOST }}:2083/execute
+
 jobs:
   deploy:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
+      - name: Pull latest main on the server
+        run: |
+          res=$(curl -sS --fail-with-body -G -H "$AUTH" \
+            "$API/VersionControl/update" \
+            --data-urlencode "repository_root=$REPO_ROOT" \
+            --data-urlencode "branch=main")
+          echo "$res" | jq '{status, errors, head: .data.last_update.identifier}'
+          test "$(echo "$res" | jq .status)" = 1
+          # The server clone must now be at the commit that triggered this run.
+          head=$(echo "$res" | jq -r .data.last_update.identifier)
+          if [ "$head" != "$GITHUB_SHA" ]; then
+            echo "::error::Server clone is at $head, expected $GITHUB_SHA"; exit 1
+          fi
 
-      - name: Sync over FTPS
-        uses: SamKirkland/FTP-Deploy-Action@v4.3.5
-        with:
-          server: ${{ secrets.FTP_SERVER }}
-          username: ${{ secrets.FTP_USERNAME }}
-          password: ${{ secrets.FTP_PASSWORD }}
-          protocol: ftps
-          server-dir: ${{ vars.FTP_SERVER_DIR }}
-          dry-run: ${{ inputs.dry_run || false }}
-          # Anything matched here is neither uploaded nor deleted on the server.
-          # php/mail-config.php holds the live Gmail App Password, is gitignored,
-          # and lives only on the server — it must survive every sync.
-          exclude: |
-            **/.git*
-            **/.git*/**
-            **/.superpowers/**
-            docs/**
-            *.md
-            *.zip
-            **/*.log
-            php/mail-config.php
-            .user.ini
-            php.ini
-            smtp-probe.php
+      - name: Run .cpanel.yml deployment
+        run: |
+          res=$(curl -sS --fail-with-body -G -H "$AUTH" \
+            "$API/VersionControlDeployment/create" \
+            --data-urlencode "repository_root=$REPO_ROOT")
+          echo "$res" | jq '{status, errors}'
+          test "$(echo "$res" | jq .status)" = 1
+          id=$(echo "$res" | jq -r .data.deploy_id)
+
+          # Deployment runs asynchronously on the server; wait for it to finish.
+          for i in $(seq 1 30); do
+            sleep 5
+            d=$(curl -sS -G -H "$AUTH" "$API/VersionControlDeployment/retrieve" \
+              | jq --arg id "$id" '.data[] | select((.deploy_id|tostring) == $id)')
+            if echo "$d" | jq -e '.timestamps.succeeded' >/dev/null; then
+              echo "Deployed $GITHUB_SHA"; exit 0
+            fi
+            if echo "$d" | jq -e '.timestamps.failed' >/dev/null; then
+              echo "::error::Deployment failed, log on server: $(echo "$d" | jq -r .log_path)"; exit 1
+            fi
+          done
+          echo "::error::Deployment did not finish within 150s"; exit 1
