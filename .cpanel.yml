@@ -1,17 +1,14 @@
 # cPanel Git Version Control deployment: copies the site files from the
 # server-side clone (~/repositories/HostelSamobor) into the live document root.
 #
-# No --delete: files that exist only on the server (php/mail-config.php,
-# .user.ini, php.ini, cgi-bin/, .well-known/, logs) are never touched.
-# A file removed from the repo must also be removed from the server by hand.
+# The host has no rsync, so this copies an explicit list with cp. Anything
+# not listed (.github/, *.md, docs/) stays out of the docroot. Server-only
+# files (php/mail-config.php, .user.ini, php.ini, cgi-bin/, .well-known/)
+# are not in git, so cp never overwrites them. Nothing is deleted: a file
+# removed from the repo must also be removed from the server by hand.
+# A new top-level file or folder must be added to the list below.
 ---
 deployment:
   tasks:
     - export DEPLOYPATH=/home/camper/hostel-samobor.hr/
-    - >-
-      /usr/bin/rsync -rlt
-      --exclude=.git/ --exclude=.github/ --exclude=.superpowers/
-      --exclude=.gitignore --exclude=.cpanel.yml
-      --exclude='*.md' --exclude='*.zip' --exclude='*.log'
-      --exclude=php/mail-config.php --exclude=.user.ini --exclude=php.ini --exclude=docs/ --exclude=smtp-probe.php
-      ./ $DEPLOYPATH
+    - /bin/cp -R .htaccess *.html send.php css js images php $DEPLOYPATH
