@@ -11,11 +11,10 @@
 <meta name="theme-color" content="#C2571F">
 <title>Dani rudarske greblice — Hostel Samobor</title>
 <meta name="description" content="Dani rudarske greblice tradicionalno se održavaju prvog vikenda u sedmom mjesecu, a manifestacija je posvećena rudarskom kolaču - rudarskoj greblici.">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400..700;1,9..144,400..700&family=Karla:wght@400;600;700;800&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="css/style.css?v=2">
-<script src="js/nav.js" defer></script>
+<link rel="preload" href="css/fonts/karla-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="css/fonts/fraunces-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="css/style.css?v=3">
+<script src="js/nav.js?v=3" defer></script>
 </head>
 <body>
 
@@ -39,7 +38,7 @@
 
 <article class="detail-item detail-solo">
   <div class="wrap">
-    <img src="images/event-greblica.jpg" width="800" height="533" alt="Rudarska greblica, tradicionalni kolač sa sirom" loading="lazy">
+    <img fetchpriority="high" src="images/event-greblica.webp" width="800" height="533" alt="Rudarska greblica, tradicionalni kolač sa sirom" srcset="images/event-greblica-480.webp 480w, images/event-greblica-640.webp 640w, images/event-greblica.webp 800w" sizes="(max-width: 960px) 100vw, 912px">
     <a class="back-link" href="dogadanja.html">← Sva događanja</a>
     <p class="eyebrow">Događanja <span class="when">&middot; Prvi vikend u srpnju</span></p>
     <h1 class="section-title">Dani rudarske greblice</h1>

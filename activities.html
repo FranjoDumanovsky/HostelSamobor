@@ -11,14 +11,13 @@
 <meta name="theme-color" content="#C2571F">
 <title>Things to do in Samobor — Hostel Samobor</title>
 <meta name="description" content="Activities in Samobor and its surroundings — hiking, cycling, horseback riding, motorcycle tours and archery.">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400..700;1,9..144,400..700&family=Karla:wght@400;600;700;800&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="css/swiper-bundle.min.css">
-<link rel="stylesheet" href="css/style.css?v=2">
-<script src="js/swiper-bundle.min.js" defer></script>
-<script src="js/showcase.js" defer></script>
-<script src="js/nav.js" defer></script>
+<link rel="preload" href="css/fonts/karla-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="css/fonts/fraunces-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="css/swiper-bundle.min.css?v=3">
+<link rel="stylesheet" href="css/style.css?v=3">
+<script src="js/swiper-bundle.min.js?v=3" defer></script>
+<script src="js/showcase.js?v=3" defer></script>
+<script src="js/nav.js?v=3" defer></script>
 </head>
 <body>
 
@@ -64,7 +63,7 @@
       <div class="swiper-wrapper">
         <div class="swiper-slide">
           <article class="show-card">
-            <img src="images/akt-planinarenje.jpg" width="800" height="533" alt="Green slopes of the Samobor hills" loading="lazy">
+            <img fetchpriority="high" src="images/akt-planinarenje.webp" width="800" height="533" alt="Green slopes of the Samobor hills" srcset="images/akt-planinarenje-480.webp 480w, images/akt-planinarenje-640.webp 640w, images/akt-planinarenje.webp 800w" sizes="(max-width: 700px) 640px, (max-width: 1200px) 100vw, 1150px">
             <div class="show-overlay">
               <h2>Hiking</h2>
               <p class="excerpt">If one is a big fan of hiking and loves exploring the nature Samobor is a right place for that. The hills of Samobor and Žumberak have interwoven network of walking and hiking marked trails.</p>
@@ -75,7 +74,7 @@
 
         <div class="swiper-slide">
           <article class="show-card">
-            <img src="images/akt-biciklizam.jpg" width="800" height="533" alt="Cyclist on a forest trail" loading="lazy">
+            <img src="images/akt-biciklizam.webp" width="800" height="533" alt="Cyclist on a forest trail" loading="lazy" srcset="images/akt-biciklizam-480.webp 480w, images/akt-biciklizam-640.webp 640w, images/akt-biciklizam.webp 800w" sizes="(max-width: 700px) 640px, (max-width: 1200px) 100vw, 1150px">
             <div class="show-overlay">
               <h2>Cycling</h2>
               <p class="excerpt">Samobor is also known for its bicycle trails organized and marked by numbers from 1 to 4. Highlands of Samobor is an excellent location for mountain biking.</p>
@@ -86,7 +85,7 @@
 
         <div class="swiper-slide">
           <article class="show-card">
-            <img src="images/akt-jahanje.jpg" width="800" height="533" alt="Horse in a meadow" loading="lazy">
+            <img src="images/akt-jahanje.webp" width="800" height="533" alt="Horse in a meadow" loading="lazy">
             <div class="show-overlay">
               <h2>Horseback riding</h2>
               <p class="excerpt">If you are a big fan of horseback riding our little town offers that activity as well. Molvice valley is the right place for you — no foreknowledge about horses needed, just the will to try.</p>
@@ -97,7 +96,7 @@
 
         <div class="swiper-slide">
           <article class="show-card">
-            <img src="images/akt-motori.jpg" width="800" height="533" alt="Motorcyclist on the road" loading="lazy">
+            <img src="images/akt-motori.webp" width="800" height="533" alt="Motorcyclist on the road" loading="lazy">
             <div class="show-overlay">
               <h2>Motorcycle tours</h2>
               <p class="excerpt">Indescribable beauty is hidden in the town of Samobor. This little town can be experienced and explored in a number of ways, including the motorcycle tours.</p>
@@ -108,7 +107,7 @@
 
         <div class="swiper-slide">
           <article class="show-card">
-            <img src="images/akt-strelicarstvo.jpg" width="800" height="533" alt="Archer aiming at a target" loading="lazy">
+            <img src="images/akt-strelicarstvo.webp" width="800" height="533" alt="Archer aiming at a target" loading="lazy" srcset="images/akt-strelicarstvo-480.webp 480w, images/akt-strelicarstvo-640.webp 640w, images/akt-strelicarstvo.webp 800w" sizes="(max-width: 700px) 640px, (max-width: 1200px) 100vw, 1150px">
             <div class="show-overlay">
               <h2>Archery</h2>
               <p class="excerpt">Citizens of Samobor and visitors of this beautiful small town got the chance to enjoy yet another sport – archery. Archery Club Samobor was founded ten years ago.</p>

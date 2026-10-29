@@ -11,14 +11,13 @@
 <meta name="theme-color" content="#C2571F">
 <title>Događanja u Samoboru — Hostel Samobor</title>
 <meta name="description" content="Sva važna događanja u Samoboru — fašnik, Bitka kod Samobora, Dani rudarske greblice, Dan grada i salamijada.">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400..700;1,9..144,400..700&family=Karla:wght@400;600;700;800&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="css/swiper-bundle.min.css">
-<link rel="stylesheet" href="css/style.css?v=2">
-<script src="js/swiper-bundle.min.js" defer></script>
-<script src="js/showcase.js" defer></script>
-<script src="js/nav.js" defer></script>
+<link rel="preload" href="css/fonts/karla-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="css/fonts/fraunces-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="css/swiper-bundle.min.css?v=3">
+<link rel="stylesheet" href="css/style.css?v=3">
+<script src="js/swiper-bundle.min.js?v=3" defer></script>
+<script src="js/showcase.js?v=3" defer></script>
+<script src="js/nav.js?v=3" defer></script>
 </head>
 <body>
 
@@ -64,7 +63,7 @@
       <div class="swiper-wrapper">
         <div class="swiper-slide">
           <article class="show-card">
-            <img src="images/event-fasnik.jpg" width="800" height="533" alt="Maskirani sudionici Samoborskog fašnika" loading="lazy">
+            <img fetchpriority="high" src="images/event-fasnik.webp" width="800" height="533" alt="Maskirani sudionici Samoborskog fašnika" srcset="images/event-fasnik-480.webp 480w, images/event-fasnik-640.webp 640w, images/event-fasnik.webp 800w" sizes="(max-width: 700px) 640px, (max-width: 1200px) 100vw, 1150px">
             <div class="show-overlay">
               <p class="when">Kraj veljače</p>
               <h2>Samoborski fašnik</h2>
@@ -76,7 +75,7 @@
 
         <div class="swiper-slide">
           <article class="show-card">
-            <img src="images/event-bitka.jpg" width="800" height="533" alt="Vitezovi u oklopima na rekonstrukciji Bitke kod Samobora" loading="lazy">
+            <img src="images/event-bitka.webp" width="800" height="533" alt="Vitezovi u oklopima na rekonstrukciji Bitke kod Samobora" loading="lazy" srcset="images/event-bitka-480.webp 480w, images/event-bitka-640.webp 640w, images/event-bitka.webp 800w" sizes="(max-width: 700px) 640px, (max-width: 1200px) 100vw, 1150px">
             <div class="show-overlay">
               <p class="when">1. ožujka</p>
               <h2>Bitka kod Samobora</h2>
@@ -88,7 +87,7 @@
 
         <div class="swiper-slide">
           <article class="show-card">
-            <img src="images/event-greblica.jpg" width="800" height="533" alt="Rudarska greblica, tradicionalni kolač sa sirom" loading="lazy">
+            <img src="images/event-greblica.webp" width="800" height="533" alt="Rudarska greblica, tradicionalni kolač sa sirom" loading="lazy" srcset="images/event-greblica-480.webp 480w, images/event-greblica-640.webp 640w, images/event-greblica.webp 800w" sizes="(max-width: 700px) 640px, (max-width: 1200px) 100vw, 1150px">
             <div class="show-overlay">
               <p class="when">Prvi vikend u srpnju</p>
               <h2>Dani rudarske greblice</h2>
@@ -100,7 +99,7 @@
 
         <div class="swiper-slide">
           <article class="show-card">
-            <img src="images/event-dan-grada.jpg" width="800" height="533" alt="Povorka na Dan grada Samobora" loading="lazy">
+            <img src="images/event-dan-grada.webp" width="800" height="533" alt="Povorka na Dan grada Samobora" loading="lazy" srcset="images/event-dan-grada-480.webp 480w, images/event-dan-grada-640.webp 640w, images/event-dan-grada.webp 800w" sizes="(max-width: 700px) 640px, (max-width: 1200px) 100vw, 1150px">
             <div class="show-overlay">
               <p class="when">Treći vikend u listopadu</p>
               <h2>Dan grada Samobora</h2>
@@ -112,7 +111,7 @@
 
         <div class="swiper-slide">
           <article class="show-card">
-            <img src="images/event-salamijada.jpg" width="800" height="533" alt="Narezana samoborska salama" loading="lazy">
+            <img src="images/event-salamijada.webp" width="800" height="533" alt="Narezana samoborska salama" loading="lazy" srcset="images/event-salamijada-480.webp 480w, images/event-salamijada-640.webp 640w, images/event-salamijada.webp 800w" sizes="(max-width: 700px) 640px, (max-width: 1200px) 100vw, 1150px">
             <div class="show-overlay">
               <p class="when">Međunarodna manifestacija</p>
               <h2>Samoborska salamijada</h2>

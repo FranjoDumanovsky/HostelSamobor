@@ -11,19 +11,18 @@
 <meta name="theme-color" content="#C2571F">
 <title>Hostel Samobor — Smještaj u srcu Samobora</title>
 <meta name="description" content="Hostel Samobor — povoljan smještaj u centru Samobora. Sobe s 2, 4, 6 i 10 ležajeva, aktivnosti i događanja u Samoboru.">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400..700;1,9..144,400..700&family=Karla:wght@400;600;700;800&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="css/swiper-bundle.min.css">
-<link rel="stylesheet" href="css/style.css?v=2">
-<script src="js/carousel.js" defer></script>
-<script src="js/swiper-bundle.min.js" defer></script>
-<script src="js/showcase.js" defer></script>
-<script src="js/lenis.min.js" defer></script>
-<script src="js/smooth-scroll.js" defer></script>
-<script src="js/nav.js" defer></script>
-<script src="js/lightbox.js" defer></script>
-<script src="js/contact-form.js" defer></script>
+<link rel="preload" href="css/fonts/karla-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="css/fonts/fraunces-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="css/swiper-bundle.min.css?v=3" media="print" onload="this.media='all'">
+<noscript><link rel="stylesheet" href="css/swiper-bundle.min.css?v=3"></noscript>
+<link rel="stylesheet" href="css/style.css?v=3">
+<script src="js/carousel.js?v=3" defer></script>
+<script src="js/showcase.js?v=3" defer></script>
+<script src="js/lenis.min.js?v=3" defer></script>
+<script src="js/smooth-scroll.js?v=3" defer></script>
+<script src="js/nav.js?v=3" defer></script>
+<script src="js/lightbox.js?v=3" defer></script>
+<script src="js/contact-form.js?v=3" defer></script>
 </head>
 <body>
 
@@ -46,19 +45,19 @@
 
 <div class="hero" data-hero role="region" aria-roledescription="vrtuljak" aria-label="Fotografije hostela i Samobora">
   <div class="hero-slide is-active" aria-hidden="false">
-    <img src="images/gal-vanjstina.jpg" width="800" height="533" alt="Zgrada Hostela Samobor na uličnom uglu sa žutim pročeljima" fetchpriority="high">
+    <img src="images/gal-vanjstina.webp" width="800" height="533" alt="Zgrada Hostela Samobor na uličnom uglu sa žutim pročeljima" fetchpriority="high" srcset="images/gal-vanjstina-320.webp 320w, images/gal-vanjstina-480.webp 480w, images/gal-vanjstina-640.webp 640w, images/gal-vanjstina.webp 800w" sizes="(max-width: 900px) 900px, 100vw">
   </div>
   <div class="hero-slide" aria-hidden="true">
-    <img data-src="images/hero.jpg" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" width="1896" height="990" alt="Glavni trg u Samoboru s terasama kafića i crvenim krovovima" loading="lazy">
+    <img data-src="images/hero.webp" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" width="1896" height="990" alt="Glavni trg u Samoboru s terasama kafića i crvenim krovovima" loading="lazy" data-srcset="images/hero-480.webp 480w, images/hero-640.webp 640w, images/hero-960.webp 960w, images/hero.webp 1600w" sizes="(max-width: 900px) 900px, 100vw">
   </div>
   <div class="hero-slide" aria-hidden="true">
-    <img data-src="images/potkrovlje.jpg" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" width="800" height="1200" alt="Spavaonica u potkrovlju s krevetima na kat" loading="lazy">
+    <img data-src="images/potkrovlje.webp" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" width="800" height="1200" alt="Spavaonica u potkrovlju s krevetima na kat" loading="lazy" data-srcset="images/potkrovlje-480.webp 480w, images/potkrovlje-640.webp 640w, images/potkrovlje.webp 800w" sizes="(max-width: 900px) 900px, 100vw">
   </div>
   <div class="hero-slide" aria-hidden="true">
-    <img data-src="images/blagovaonica.jpg" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" width="800" height="533" alt="Blagovaonica sa zelenim zidovima i okruglim stolovima" loading="lazy">
+    <img data-src="images/blagovaonica.webp" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" width="800" height="533" alt="Blagovaonica sa zelenim zidovima i okruglim stolovima" loading="lazy" data-srcset="images/blagovaonica-480.webp 480w, images/blagovaonica-640.webp 640w, images/blagovaonica.webp 800w" sizes="(max-width: 900px) 900px, 100vw">
   </div>
   <div class="hero-slide" aria-hidden="true">
-    <img data-src="images/akt-biciklizam.jpg" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" width="800" height="533" alt="Biciklist na šumskoj stazi u Samoborskom gorju" loading="lazy">
+    <img data-src="images/akt-biciklizam.webp" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" width="800" height="533" alt="Biciklist na šumskoj stazi u Samoborskom gorju" loading="lazy" data-srcset="images/akt-biciklizam-480.webp 480w, images/akt-biciklizam-640.webp 640w, images/akt-biciklizam.webp 800w" sizes="(max-width: 900px) 900px, 100vw">
   </div>
 
   <div class="hero-text">
@@ -116,7 +115,7 @@
 
     <div class="split">
       <div class="split-photo">
-        <img src="images/potkrovlje.jpg" width="800" height="1200" alt="Spavaonica u potkrovlju s krevetima na kat i drvenim stropom" loading="lazy">
+        <img src="images/potkrovlje.webp" width="800" height="1200" alt="Spavaonica u potkrovlju s krevetima na kat i drvenim stropom" loading="lazy" srcset="images/potkrovlje-480.webp 480w, images/potkrovlje-640.webp 640w, images/potkrovlje.webp 800w" sizes="(max-width: 860px) 100vw, 680px">
       </div>
       <div class="split-copy">
         <p>Spavaonice su opremljene novim, visoko kvalitetnim krevetima i ormarima. Hostel također omogućuje bežični pristup internetu. Prvi kat sadrži praonicu rublja, kuhinju i dnevni boravak sa 60 stolica, TV i klima uređaj.</p>
@@ -135,7 +134,7 @@
 
     <div class="room-options">
       <div class="room-card">
-        <img src="images/soba-2.jpg" width="800" height="533" alt="Privatna soba u potkrovlju" loading="lazy">
+        <img src="images/soba-2.webp" width="800" height="533" alt="Privatna soba u potkrovlju" loading="lazy" srcset="images/soba-2-480.webp 480w, images/soba-2-640.webp 640w, images/soba-2.webp 800w" sizes="(max-width: 719px) 100vw, 580px">
         <div class="room-body">
           <p class="beds">1<small>krevet</small></p>
           <h3>Krevet za 1 osobu u spavaonici</h3>
@@ -144,7 +143,7 @@
         </div>
       </div>
       <div class="room-card">
-        <img src="images/spavaonica.jpg" width="800" height="533" alt="Spavaonica s krevetima na kat" loading="lazy">
+        <img src="images/spavaonica.webp" width="800" height="533" alt="Spavaonica s krevetima na kat" loading="lazy" srcset="images/spavaonica-480.webp 480w, images/spavaonica-640.webp 640w, images/spavaonica.webp 800w" sizes="(max-width: 719px) 100vw, 580px">
         <div class="room-body">
           <p class="beds">1<small>soba</small></p>
           <h3>Cijela soba samo za vas</h3>
@@ -176,43 +175,43 @@
   <div class="wrap carousel" data-carousel>
     <div class="car-track" data-lenis-prevent role="region" aria-label="Galerija fotografija hostela" tabindex="0">
       <figure class="gallery-item">
-        <img src="images/gal-vanjstina.jpg" width="800" height="533" alt="Ulica ispred hostela s natpisom Hostel Samobor" loading="lazy">
+        <img src="images/gal-vanjstina.webp" width="800" height="533" alt="Ulica ispred hostela s natpisom Hostel Samobor" loading="lazy" srcset="images/gal-vanjstina-320.webp 320w, images/gal-vanjstina-480.webp 480w, images/gal-vanjstina-640.webp 640w, images/gal-vanjstina.webp 800w" sizes="(max-width: 640px) 315px, 450px">
         <figcaption>Hostel u centru Samobora</figcaption>
       </figure>
       <figure class="gallery-item">
-        <img src="images/blagovaonica.jpg" width="800" height="533" alt="Blagovaonica sa zelenim zidovima i okruglim stolovima" loading="lazy">
+        <img src="images/blagovaonica.webp" width="800" height="533" alt="Blagovaonica sa zelenim zidovima i okruglim stolovima" loading="lazy" srcset="images/blagovaonica-480.webp 480w, images/blagovaonica-640.webp 640w, images/blagovaonica.webp 800w" sizes="(max-width: 640px) 315px, 450px">
         <figcaption>Blagovaonica</figcaption>
       </figure>
       <figure class="gallery-item">
-        <img src="images/gal-stubiste.jpg" width="800" height="533" alt="Svijetlo stubište sa žutim rukohvatima i fotografijama na zidu" loading="lazy">
+        <img src="images/gal-stubiste.webp" width="800" height="533" alt="Svijetlo stubište sa žutim rukohvatima i fotografijama na zidu" loading="lazy" srcset="images/gal-stubiste-320.webp 320w, images/gal-stubiste-480.webp 480w, images/gal-stubiste-640.webp 640w, images/gal-stubiste.webp 800w" sizes="(max-width: 640px) 315px, 450px">
         <figcaption>Stubište</figcaption>
       </figure>
       <figure class="gallery-item">
-        <img src="images/gal-soba.jpg" width="800" height="1200" alt="Četverokrevetna spavaonica u potkrovlju" loading="lazy">
+        <img src="images/gal-soba.webp" width="800" height="1200" alt="Četverokrevetna spavaonica u potkrovlju" loading="lazy" srcset="images/gal-soba-320.webp 320w, images/gal-soba-480.webp 480w, images/gal-soba-640.webp 640w, images/gal-soba.webp 800w" sizes="(max-width: 640px) 140px, 200px">
         <figcaption>Spavaonica</figcaption>
       </figure>
       <figure class="gallery-item">
-        <img src="images/gal-hodnik.jpg" width="800" height="533" alt="Hodnik sa sobama i parketom" loading="lazy">
+        <img src="images/gal-hodnik.webp" width="800" height="533" alt="Hodnik sa sobama i parketom" loading="lazy" srcset="images/gal-hodnik-320.webp 320w, images/gal-hodnik-480.webp 480w, images/gal-hodnik-640.webp 640w, images/gal-hodnik.webp 800w" sizes="(max-width: 640px) 315px, 450px">
         <figcaption>Hodnik</figcaption>
       </figure>
       <figure class="gallery-item">
-        <img src="images/gal-kuhinja.jpg" width="800" height="533" alt="Zajednička kuhinja s plavim elementima" loading="lazy">
+        <img src="images/gal-kuhinja.webp" width="800" height="533" alt="Zajednička kuhinja s plavim elementima" loading="lazy" srcset="images/gal-kuhinja-320.webp 320w, images/gal-kuhinja-480.webp 480w, images/gal-kuhinja-640.webp 640w, images/gal-kuhinja.webp 800w" sizes="(max-width: 640px) 315px, 450px">
         <figcaption>Kuhinja</figcaption>
       </figure>
       <figure class="gallery-item">
-        <img src="images/spavaonica.jpg" width="800" height="533" alt="Spavaonica s narančastim krevetima na kat" loading="lazy">
+        <img src="images/spavaonica.webp" width="800" height="533" alt="Spavaonica s narančastim krevetima na kat" loading="lazy" srcset="images/spavaonica-480.webp 480w, images/spavaonica-640.webp 640w, images/spavaonica.webp 800w" sizes="(max-width: 640px) 315px, 450px">
         <figcaption>Spavaonica</figcaption>
       </figure>
       <figure class="gallery-item">
-        <img src="images/gal-ormarici.jpg" width="800" height="1200" alt="Krevet na kat s ormarićem za stvari" loading="lazy">
+        <img src="images/gal-ormarici.webp" width="800" height="1200" alt="Krevet na kat s ormarićem za stvari" loading="lazy" srcset="images/gal-ormarici-320.webp 320w, images/gal-ormarici-480.webp 480w, images/gal-ormarici-640.webp 640w, images/gal-ormarici.webp 800w" sizes="(max-width: 640px) 140px, 200px">
         <figcaption>Ormarići u sobi</figcaption>
       </figure>
       <figure class="gallery-item">
-        <img src="images/gal-kupaonica.jpg" width="800" height="533" alt="Kupaonica s umivaonicima, ogledalom i tuševima" loading="lazy">
+        <img src="images/gal-kupaonica.webp" width="800" height="533" alt="Kupaonica s umivaonicima, ogledalom i tuševima" loading="lazy" srcset="images/gal-kupaonica-320.webp 320w, images/gal-kupaonica-480.webp 480w, images/gal-kupaonica-640.webp 640w, images/gal-kupaonica.webp 800w" sizes="(max-width: 640px) 315px, 450px">
         <figcaption>Kupaonica</figcaption>
       </figure>
       <figure class="gallery-item">
-        <img src="images/potkrovlje-kreveti.jpg" width="800" height="533" alt="Kreveti u potkrovlju uz krovni prozor" loading="lazy">
+        <img src="images/potkrovlje-kreveti.webp" width="800" height="533" alt="Kreveti u potkrovlju uz krovni prozor" loading="lazy" srcset="images/potkrovlje-kreveti-480.webp 480w, images/potkrovlje-kreveti-640.webp 640w, images/potkrovlje-kreveti.webp 800w" sizes="(max-width: 640px) 315px, 450px">
         <figcaption>Potkrovlje</figcaption>
       </figure>
     </div>
@@ -242,7 +241,7 @@
       <div class="swiper-wrapper">
         <div class="swiper-slide">
           <article class="show-card">
-            <img src="images/event-fasnik.jpg" width="800" height="533" alt="Maskirani sudionici Samoborskog fašnika" loading="lazy">
+            <img src="images/event-fasnik.webp" width="800" height="533" alt="Maskirani sudionici Samoborskog fašnika" loading="lazy" srcset="images/event-fasnik-480.webp 480w, images/event-fasnik-640.webp 640w, images/event-fasnik.webp 800w" sizes="(max-width: 700px) 640px, (max-width: 1200px) 100vw, 1150px">
             <div class="show-overlay">
               <p class="when">Kraj veljače</p>
               <h3>Samoborski fašnik</h3>
@@ -254,7 +253,7 @@
 
         <div class="swiper-slide">
           <article class="show-card">
-            <img src="images/event-bitka.jpg" width="800" height="533" alt="Vitezovi u oklopima na rekonstrukciji Bitke kod Samobora" loading="lazy">
+            <img src="images/event-bitka.webp" width="800" height="533" alt="Vitezovi u oklopima na rekonstrukciji Bitke kod Samobora" loading="lazy" srcset="images/event-bitka-480.webp 480w, images/event-bitka-640.webp 640w, images/event-bitka.webp 800w" sizes="(max-width: 700px) 640px, (max-width: 1200px) 100vw, 1150px">
             <div class="show-overlay">
               <p class="when">1. ožujka</p>
               <h3>Bitka kod Samobora</h3>
@@ -266,7 +265,7 @@
 
         <div class="swiper-slide">
           <article class="show-card">
-            <img src="images/event-greblica.jpg" width="800" height="533" alt="Rudarska greblica, tradicionalni kolač sa sirom" loading="lazy">
+            <img src="images/event-greblica.webp" width="800" height="533" alt="Rudarska greblica, tradicionalni kolač sa sirom" loading="lazy" srcset="images/event-greblica-480.webp 480w, images/event-greblica-640.webp 640w, images/event-greblica.webp 800w" sizes="(max-width: 700px) 640px, (max-width: 1200px) 100vw, 1150px">
             <div class="show-overlay">
               <p class="when">Prvi vikend u srpnju</p>
               <h3>Dani rudarske greblice</h3>
@@ -278,7 +277,7 @@
 
         <div class="swiper-slide">
           <article class="show-card">
-            <img src="images/event-dan-grada.jpg" width="800" height="533" alt="Povorka na Dan grada Samobora" loading="lazy">
+            <img src="images/event-dan-grada.webp" width="800" height="533" alt="Povorka na Dan grada Samobora" loading="lazy" srcset="images/event-dan-grada-480.webp 480w, images/event-dan-grada-640.webp 640w, images/event-dan-grada.webp 800w" sizes="(max-width: 700px) 640px, (max-width: 1200px) 100vw, 1150px">
             <div class="show-overlay">
               <p class="when">Treći vikend u listopadu</p>
               <h3>Dan grada Samobora</h3>
@@ -290,7 +289,7 @@
 
         <div class="swiper-slide">
           <article class="show-card">
-            <img src="images/event-salamijada.jpg" width="800" height="533" alt="Narezana samoborska salama" loading="lazy">
+            <img src="images/event-salamijada.webp" width="800" height="533" alt="Narezana samoborska salama" loading="lazy" srcset="images/event-salamijada-480.webp 480w, images/event-salamijada-640.webp 640w, images/event-salamijada.webp 800w" sizes="(max-width: 700px) 640px, (max-width: 1200px) 100vw, 1150px">
             <div class="show-overlay">
               <p class="when">Međunarodna manifestacija</p>
               <h3>Samoborska salamijada</h3>
@@ -328,7 +327,7 @@
       <div class="swiper-wrapper">
         <div class="swiper-slide">
           <article class="show-card">
-            <img src="images/akt-planinarenje.jpg" width="800" height="533" alt="Zeleni obronci Samoborskog gorja" loading="lazy">
+            <img src="images/akt-planinarenje.webp" width="800" height="533" alt="Zeleni obronci Samoborskog gorja" loading="lazy" srcset="images/akt-planinarenje-480.webp 480w, images/akt-planinarenje-640.webp 640w, images/akt-planinarenje.webp 800w" sizes="(max-width: 700px) 640px, (max-width: 1200px) 100vw, 1150px">
             <div class="show-overlay">
               <h3>Planinarenje</h3>
               <p class="excerpt">Ukoliko ste veliki ljubitelj planinarenja i volite istraživati prirodu tada je grad Samobor pravo mjesto za to. Samoborsko gorje i Žumberak isprepleteni su mrežom planinarskih putova.</p>
@@ -339,7 +338,7 @@
 
         <div class="swiper-slide">
           <article class="show-card">
-            <img src="images/akt-biciklizam.jpg" width="800" height="533" alt="Biciklist na šumskoj stazi" loading="lazy">
+            <img src="images/akt-biciklizam.webp" width="800" height="533" alt="Biciklist na šumskoj stazi" loading="lazy" srcset="images/akt-biciklizam-480.webp 480w, images/akt-biciklizam-640.webp 640w, images/akt-biciklizam.webp 800w" sizes="(max-width: 700px) 640px, (max-width: 1200px) 100vw, 1150px">
             <div class="show-overlay">
               <h3>Biciklizam</h3>
               <p class="excerpt">Samobor je poznat i po biciklističkim stazama koje su organizirane i označene brojevima od 1 do 4. Samoborsko gorje odlična je lokacija za brdski biciklizam.</p>
@@ -350,7 +349,7 @@
 
         <div class="swiper-slide">
           <article class="show-card">
-            <img src="images/akt-jahanje.jpg" width="800" height="533" alt="Konj na livadi" loading="lazy">
+            <img src="images/akt-jahanje.webp" width="800" height="533" alt="Konj na livadi" loading="lazy">
             <div class="show-overlay">
               <h3>Jahanje</h3>
               <p class="excerpt">Ukoliko ste veliki ljubitelj konja i volite jahati, naš mali gradić nudi vam i tu aktivnost. Dolina Molvice pravo je mjesto za vas — nije vam potrebno nikakvo znanje, samo volja.</p>
@@ -361,7 +360,7 @@
 
         <div class="swiper-slide">
           <article class="show-card">
-            <img src="images/akt-motori.jpg" width="800" height="533" alt="Motociklist na cesti" loading="lazy">
+            <img src="images/akt-motori.webp" width="800" height="533" alt="Motociklist na cesti" loading="lazy">
             <div class="show-overlay">
               <h3>Vožnja motorima</h3>
               <p class="excerpt">Grad Samobor krije neopisivu ljepotu. Ovaj mali samozatajni gradić možete doživjeti i razgledati na brojne načine, a među njima i moto turama.</p>
@@ -372,7 +371,7 @@
 
         <div class="swiper-slide">
           <article class="show-card">
-            <img src="images/akt-strelicarstvo.jpg" width="800" height="533" alt="Streličar gađa metu" loading="lazy">
+            <img src="images/akt-strelicarstvo.webp" width="800" height="533" alt="Streličar gađa metu" loading="lazy" srcset="images/akt-strelicarstvo-480.webp 480w, images/akt-strelicarstvo-640.webp 640w, images/akt-strelicarstvo.webp 800w" sizes="(max-width: 700px) 640px, (max-width: 1200px) 100vw, 1150px">
             <div class="show-overlay">
               <h3>Streličarstvo</h3>
               <p class="excerpt">Samoborci i svi gosti ovog prekrasnog malog grada dobili su priliku uživati u još jednom sportu - streličarstvu. Streličarski klub Samobor osnovan je prije deset godina.</p>
@@ -394,21 +393,21 @@
 
     <div class="service-grid">
       <a class="service-card" href="https://kombi-samobor.com/hr/" target="_blank" rel="noopener">
-        <img src="images/usluga-kombi.jpg" width="1280" height="960" alt="Bijeli kombi Ford Transit Custom" loading="lazy">
+        <img src="images/usluga-kombi.webp" width="1280" height="960" alt="Bijeli kombi Ford Transit Custom" loading="lazy" srcset="images/usluga-kombi-480.webp 480w, images/usluga-kombi-640.webp 640w, images/usluga-kombi-960.webp 960w, images/usluga-kombi.webp 1280w" sizes="(max-width: 900px) 100vw, 740px">
         <span class="service-overlay">
           <span class="kicker">Najam kombija</span>
           <h3>Rent Kombi</h3>
         </span>
       </a>
       <a class="service-card" href="https://camper-samobor.com/" target="_blank" rel="noopener">
-        <img src="images/usluga-kamper.jpg" width="1620" height="1080" alt="Unutrašnjost kampera sa sjedećom garniturom i stolom" loading="lazy">
+        <img src="images/usluga-kamper.webp" width="1620" height="1080" alt="Unutrašnjost kampera sa sjedećom garniturom i stolom" loading="lazy" srcset="images/usluga-kamper-480.webp 480w, images/usluga-kamper-640.webp 640w, images/usluga-kamper-960.webp 960w, images/usluga-kamper.webp 1600w" sizes="(max-width: 900px) 100vw, 740px">
         <span class="service-overlay">
           <span class="kicker">Najam kampera</span>
           <h3>Rent Kamper</h3>
         </span>
       </a>
       <a class="service-card" href="https://www.sobe-samobor.biz/" target="_blank" rel="noopener">
-        <img src="images/usluga-sobe-medved.jpg" width="500" height="333" alt="Kuća Sobe Medved u Samoboru" loading="lazy">
+        <img src="images/usluga-sobe-medved.webp" width="500" height="333" alt="Kuća Sobe Medved u Samoboru" loading="lazy">
         <span class="service-overlay">
           <span class="kicker">Smještaj</span>
           <h3>Sobe Medved</h3>

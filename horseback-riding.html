@@ -11,11 +11,10 @@
 <meta name="theme-color" content="#C2571F">
 <title>Horseback riding — Hostel Samobor</title>
 <meta name="description" content="If you are a big fan of horseback riding our little town offers that activity as well.">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400..700;1,9..144,400..700&family=Karla:wght@400;600;700;800&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="css/style.css?v=2">
-<script src="js/nav.js" defer></script>
+<link rel="preload" href="css/fonts/karla-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="css/fonts/fraunces-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="css/style.css?v=3">
+<script src="js/nav.js?v=3" defer></script>
 </head>
 <body>
 
@@ -39,7 +38,7 @@
 
 <article class="detail-item detail-solo">
   <div class="wrap">
-    <img src="images/akt-jahanje.jpg" width="800" height="533" alt="Horse in a meadow" loading="lazy">
+    <img fetchpriority="high" src="images/akt-jahanje.webp" width="800" height="533" alt="Horse in a meadow">
     <a class="back-link" href="activities.html">← All activities</a>
     <p class="eyebrow">Activities</p>
     <h1 class="section-title">Horseback riding</h1>

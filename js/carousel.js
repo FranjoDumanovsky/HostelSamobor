@@ -39,8 +39,17 @@
   var dots = hero.querySelectorAll(".hero-dots button");
   var current = 0, timer = null, stopped = false;
 
+  /* slides 2+ carry data-src; fetching them early competes with the first slide (LCP) */
+  function loadSlide(s) {
+    var img = s && s.querySelector("img[data-src]");
+    if (!img) return;
+    if (img.dataset.srcset) { img.srcset = img.dataset.srcset; img.removeAttribute("data-srcset"); }
+    img.src = img.dataset.src; img.removeAttribute("data-src");
+  }
+
   function show(i) {
     current = (i + slides.length) % slides.length;
+    loadSlide(slides[current]);
     slides.forEach(function (s, n) {
       s.classList.toggle("is-active", n === current);
       s.setAttribute("aria-hidden", n === current ? "false" : "true");
@@ -65,12 +74,9 @@
   hero.addEventListener("focusin", pause);
   hero.addEventListener("touchstart", stop, { passive: true });
 
-  /* slides 2+ carry data-src: fetch them only after the page has loaded */
+  /* fetch the remaining slides a few seconds after load, well before autoplay needs them */
   window.addEventListener("load", function () {
-    slides.forEach(function (s) {
-      var img = s.querySelector("img[data-src]");
-      if (img) { img.src = img.dataset.src; img.removeAttribute("data-src"); }
-    });
+    setTimeout(function () { slides.forEach(loadSlide); }, 3000);
     play();
   });
 })();

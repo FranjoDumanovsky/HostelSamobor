@@ -13,6 +13,12 @@ AddDefaultCharset UTF-8
 <IfModule mod_rewrite.c>
   RewriteEngine On
 
+  # Old WordPress-era language folders (/hr/..., /en/...) still get linked
+  # (e.g. from kombi-samobor.com) and indexed; send them to the static pages
+  # in one hop, before the host rule adds a second redirect.
+  RewriteRule ^hr(/.*)?$ https://hostel-samobor.hr/ [R=301,L]
+  RewriteRule ^en(/.*)?$ https://hostel-samobor.hr/en.html [R=301,L]
+
   # Canonical host. Fires for www.hostel-samobor.hr, for plain HTTP, and for the
   # addon domain's leaked path on the primary domain
   # (https://primary-domain.hr/hostel-samobor.hr/...). $1 is the path relative to
@@ -42,6 +48,8 @@ AddDefaultCharset UTF-8
   AddOutputFilterByType DEFLATE text/html text/css text/javascript application/javascript image/svg+xml
 </IfModule>
 
+AddType font/woff2 .woff2
+
 <IfModule mod_expires.c>
   ExpiresActive On
   # Images/fonts are content-stable; HTML must stay short so edits go live.
@@ -49,8 +57,12 @@ AddDefaultCharset UTF-8
   ExpiresByType image/png "access plus 1 year"
   ExpiresByType image/webp "access plus 1 year"
   ExpiresByType image/svg+xml "access plus 1 year"
-  ExpiresByType text/css "access plus 1 month"
-  ExpiresByType application/javascript "access plus 1 month"
+  # CSS/JS are referenced with ?v=N, so bump N on every change and they can
+  # be cached for a year like the images.
+  ExpiresByType font/woff2 "access plus 1 year"
+  ExpiresByType text/css "access plus 1 year"
+  ExpiresByType application/javascript "access plus 1 year"
+  ExpiresByType text/javascript "access plus 1 year"
   ExpiresByType text/html "access plus 10 minutes"
 </IfModule>
 

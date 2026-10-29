@@ -11,19 +11,18 @@
 <meta name="theme-color" content="#C2571F">
 <title>Hostel Samobor — Accommodation in the heart of Samobor</title>
 <meta name="description" content="Hostel Samobor — affordable accommodation in the centre of Samobor, Croatia. Rooms with 2, 4, 6 and 10 beds, transfers, activities and events in Samobor.">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400..700;1,9..144,400..700&family=Karla:wght@400;600;700;800&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="css/swiper-bundle.min.css">
-<link rel="stylesheet" href="css/style.css?v=2">
-<script src="js/carousel.js" defer></script>
-<script src="js/swiper-bundle.min.js" defer></script>
-<script src="js/showcase.js" defer></script>
-<script src="js/lenis.min.js" defer></script>
-<script src="js/smooth-scroll.js" defer></script>
-<script src="js/nav.js" defer></script>
-<script src="js/lightbox.js" defer></script>
-<script src="js/contact-form.js" defer></script>
+<link rel="preload" href="css/fonts/karla-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="css/fonts/fraunces-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="css/swiper-bundle.min.css?v=3" media="print" onload="this.media='all'">
+<noscript><link rel="stylesheet" href="css/swiper-bundle.min.css?v=3"></noscript>
+<link rel="stylesheet" href="css/style.css?v=3">
+<script src="js/carousel.js?v=3" defer></script>
+<script src="js/showcase.js?v=3" defer></script>
+<script src="js/lenis.min.js?v=3" defer></script>
+<script src="js/smooth-scroll.js?v=3" defer></script>
+<script src="js/nav.js?v=3" defer></script>
+<script src="js/lightbox.js?v=3" defer></script>
+<script src="js/contact-form.js?v=3" defer></script>
 </head>
 <body>
 
@@ -46,19 +45,19 @@
 
 <div class="hero" data-hero role="region" aria-roledescription="carousel" aria-label="Photos of the hostel and Samobor">
   <div class="hero-slide is-active" aria-hidden="false">
-    <img src="images/gal-vanjstina.jpg" width="800" height="533" alt="Hostel Samobor building on a street corner with yellow façades" fetchpriority="high">
+    <img src="images/gal-vanjstina.webp" width="800" height="533" alt="Hostel Samobor building on a street corner with yellow façades" fetchpriority="high" srcset="images/gal-vanjstina-320.webp 320w, images/gal-vanjstina-480.webp 480w, images/gal-vanjstina-640.webp 640w, images/gal-vanjstina.webp 800w" sizes="(max-width: 900px) 900px, 100vw">
   </div>
   <div class="hero-slide" aria-hidden="true">
-    <img data-src="images/hero.jpg" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" width="1896" height="990" alt="Samobor main square with café terraces and red rooftops" loading="lazy">
+    <img data-src="images/hero.webp" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" width="1896" height="990" alt="Samobor main square with café terraces and red rooftops" loading="lazy" data-srcset="images/hero-480.webp 480w, images/hero-640.webp 640w, images/hero-960.webp 960w, images/hero.webp 1600w" sizes="(max-width: 900px) 900px, 100vw">
   </div>
   <div class="hero-slide" aria-hidden="true">
-    <img data-src="images/potkrovlje.jpg" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" width="800" height="1200" alt="Attic dormitory with bunk beds" loading="lazy">
+    <img data-src="images/potkrovlje.webp" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" width="800" height="1200" alt="Attic dormitory with bunk beds" loading="lazy" data-srcset="images/potkrovlje-480.webp 480w, images/potkrovlje-640.webp 640w, images/potkrovlje.webp 800w" sizes="(max-width: 900px) 900px, 100vw">
   </div>
   <div class="hero-slide" aria-hidden="true">
-    <img data-src="images/blagovaonica.jpg" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" width="800" height="533" alt="Dining room with green walls and round tables" loading="lazy">
+    <img data-src="images/blagovaonica.webp" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" width="800" height="533" alt="Dining room with green walls and round tables" loading="lazy" data-srcset="images/blagovaonica-480.webp 480w, images/blagovaonica-640.webp 640w, images/blagovaonica.webp 800w" sizes="(max-width: 900px) 900px, 100vw">
   </div>
   <div class="hero-slide" aria-hidden="true">
-    <img data-src="images/akt-biciklizam.jpg" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" width="800" height="533" alt="Cyclist on a forest trail in the Samobor hills" loading="lazy">
+    <img data-src="images/akt-biciklizam.webp" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" width="800" height="533" alt="Cyclist on a forest trail in the Samobor hills" loading="lazy" data-srcset="images/akt-biciklizam-480.webp 480w, images/akt-biciklizam-640.webp 640w, images/akt-biciklizam.webp 800w" sizes="(max-width: 900px) 900px, 100vw">
   </div>
 
   <div class="hero-text">
@@ -116,7 +115,7 @@
 
     <div class="split">
       <div class="split-photo">
-        <img src="images/potkrovlje.jpg" width="800" height="1200" alt="Attic dormitory with bunk beds and a wooden ceiling" loading="lazy">
+        <img src="images/potkrovlje.webp" width="800" height="1200" alt="Attic dormitory with bunk beds and a wooden ceiling" loading="lazy" srcset="images/potkrovlje-480.webp 480w, images/potkrovlje-640.webp 640w, images/potkrovlje.webp 800w" sizes="(max-width: 860px) 100vw, 680px">
       </div>
       <div class="split-copy">
         <p>The dormitories are equipped with new high quality beds and wardrobes. The hostel also provides wireless Internet access. The laundry facilities, kitchen and air conditioned living room with 60 chairs and TV are located on the first floor.</p>
@@ -135,7 +134,7 @@
 
     <div class="room-options">
       <div class="room-card">
-        <img src="images/soba-2.jpg" width="800" height="533" alt="Private attic room" loading="lazy">
+        <img src="images/soba-2.webp" width="800" height="533" alt="Private attic room" loading="lazy" srcset="images/soba-2-480.webp 480w, images/soba-2-640.webp 640w, images/soba-2.webp 800w" sizes="(max-width: 719px) 100vw, 580px">
         <div class="room-body">
           <p class="beds">1<small>bed</small></p>
           <h3>One bed in a shared dormitory</h3>
@@ -144,7 +143,7 @@
         </div>
       </div>
       <div class="room-card">
-        <img src="images/spavaonica.jpg" width="800" height="533" alt="Dormitory with bunk beds" loading="lazy">
+        <img src="images/spavaonica.webp" width="800" height="533" alt="Dormitory with bunk beds" loading="lazy" srcset="images/spavaonica-480.webp 480w, images/spavaonica-640.webp 640w, images/spavaonica.webp 800w" sizes="(max-width: 719px) 100vw, 580px">
         <div class="room-body">
           <p class="beds">1<small>room</small></p>
           <h3>A whole room to yourself</h3>
@@ -176,43 +175,43 @@
   <div class="wrap carousel" data-carousel>
     <div class="car-track" data-lenis-prevent role="region" aria-label="Hostel photo gallery" tabindex="0">
       <figure class="gallery-item">
-        <img src="images/gal-vanjstina.jpg" width="800" height="533" alt="Street in front of the hostel with the Hostel Samobor sign" loading="lazy">
+        <img src="images/gal-vanjstina.webp" width="800" height="533" alt="Street in front of the hostel with the Hostel Samobor sign" loading="lazy" srcset="images/gal-vanjstina-320.webp 320w, images/gal-vanjstina-480.webp 480w, images/gal-vanjstina-640.webp 640w, images/gal-vanjstina.webp 800w" sizes="(max-width: 640px) 315px, 450px">
         <figcaption>The hostel in the centre of Samobor</figcaption>
       </figure>
       <figure class="gallery-item">
-        <img src="images/blagovaonica.jpg" width="800" height="533" alt="Dining room with green walls and round tables" loading="lazy">
+        <img src="images/blagovaonica.webp" width="800" height="533" alt="Dining room with green walls and round tables" loading="lazy" srcset="images/blagovaonica-480.webp 480w, images/blagovaonica-640.webp 640w, images/blagovaonica.webp 800w" sizes="(max-width: 640px) 315px, 450px">
         <figcaption>Dining room</figcaption>
       </figure>
       <figure class="gallery-item">
-        <img src="images/gal-stubiste.jpg" width="800" height="533" alt="Bright staircase with yellow handrails and photos on the wall" loading="lazy">
+        <img src="images/gal-stubiste.webp" width="800" height="533" alt="Bright staircase with yellow handrails and photos on the wall" loading="lazy" srcset="images/gal-stubiste-320.webp 320w, images/gal-stubiste-480.webp 480w, images/gal-stubiste-640.webp 640w, images/gal-stubiste.webp 800w" sizes="(max-width: 640px) 315px, 450px">
         <figcaption>Staircase</figcaption>
       </figure>
       <figure class="gallery-item">
-        <img src="images/gal-soba.jpg" width="800" height="1200" alt="Four-bed attic dormitory" loading="lazy">
+        <img src="images/gal-soba.webp" width="800" height="1200" alt="Four-bed attic dormitory" loading="lazy" srcset="images/gal-soba-320.webp 320w, images/gal-soba-480.webp 480w, images/gal-soba-640.webp 640w, images/gal-soba.webp 800w" sizes="(max-width: 640px) 140px, 200px">
         <figcaption>Dormitory</figcaption>
       </figure>
       <figure class="gallery-item">
-        <img src="images/gal-hodnik.jpg" width="800" height="533" alt="Corridor with rooms and parquet flooring" loading="lazy">
+        <img src="images/gal-hodnik.webp" width="800" height="533" alt="Corridor with rooms and parquet flooring" loading="lazy" srcset="images/gal-hodnik-320.webp 320w, images/gal-hodnik-480.webp 480w, images/gal-hodnik-640.webp 640w, images/gal-hodnik.webp 800w" sizes="(max-width: 640px) 315px, 450px">
         <figcaption>Corridor</figcaption>
       </figure>
       <figure class="gallery-item">
-        <img src="images/gal-kuhinja.jpg" width="800" height="533" alt="Shared kitchen with blue cabinets" loading="lazy">
+        <img src="images/gal-kuhinja.webp" width="800" height="533" alt="Shared kitchen with blue cabinets" loading="lazy" srcset="images/gal-kuhinja-320.webp 320w, images/gal-kuhinja-480.webp 480w, images/gal-kuhinja-640.webp 640w, images/gal-kuhinja.webp 800w" sizes="(max-width: 640px) 315px, 450px">
         <figcaption>Kitchen</figcaption>
       </figure>
       <figure class="gallery-item">
-        <img src="images/spavaonica.jpg" width="800" height="533" alt="Dormitory with orange bunk beds" loading="lazy">
+        <img src="images/spavaonica.webp" width="800" height="533" alt="Dormitory with orange bunk beds" loading="lazy" srcset="images/spavaonica-480.webp 480w, images/spavaonica-640.webp 640w, images/spavaonica.webp 800w" sizes="(max-width: 640px) 315px, 450px">
         <figcaption>Dormitory</figcaption>
       </figure>
       <figure class="gallery-item">
-        <img src="images/gal-ormarici.jpg" width="800" height="1200" alt="Bunk bed with a storage locker" loading="lazy">
+        <img src="images/gal-ormarici.webp" width="800" height="1200" alt="Bunk bed with a storage locker" loading="lazy" srcset="images/gal-ormarici-320.webp 320w, images/gal-ormarici-480.webp 480w, images/gal-ormarici-640.webp 640w, images/gal-ormarici.webp 800w" sizes="(max-width: 640px) 140px, 200px">
         <figcaption>In-room lockers</figcaption>
       </figure>
       <figure class="gallery-item">
-        <img src="images/gal-kupaonica.jpg" width="800" height="533" alt="Bathroom with sinks, a mirror and showers" loading="lazy">
+        <img src="images/gal-kupaonica.webp" width="800" height="533" alt="Bathroom with sinks, a mirror and showers" loading="lazy" srcset="images/gal-kupaonica-320.webp 320w, images/gal-kupaonica-480.webp 480w, images/gal-kupaonica-640.webp 640w, images/gal-kupaonica.webp 800w" sizes="(max-width: 640px) 315px, 450px">
         <figcaption>Bathroom</figcaption>
       </figure>
       <figure class="gallery-item">
-        <img src="images/potkrovlje-kreveti.jpg" width="800" height="533" alt="Beds in the attic under a skylight" loading="lazy">
+        <img src="images/potkrovlje-kreveti.webp" width="800" height="533" alt="Beds in the attic under a skylight" loading="lazy" srcset="images/potkrovlje-kreveti-480.webp 480w, images/potkrovlje-kreveti-640.webp 640w, images/potkrovlje-kreveti.webp 800w" sizes="(max-width: 640px) 315px, 450px">
         <figcaption>Attic</figcaption>
       </figure>
     </div>
@@ -242,7 +241,7 @@
       <div class="swiper-wrapper">
         <div class="swiper-slide">
           <article class="show-card">
-            <img src="images/event-fasnik.jpg" width="800" height="533" alt="Costumed participants of the Samobor Carnival" loading="lazy">
+            <img src="images/event-fasnik.webp" width="800" height="533" alt="Costumed participants of the Samobor Carnival" loading="lazy" srcset="images/event-fasnik-480.webp 480w, images/event-fasnik-640.webp 640w, images/event-fasnik.webp 800w" sizes="(max-width: 700px) 640px, (max-width: 1200px) 100vw, 1150px">
             <div class="show-overlay">
               <p class="when">End of February</p>
               <h3>Samobor Carnival</h3>
@@ -254,7 +253,7 @@
 
         <div class="swiper-slide">
           <article class="show-card">
-            <img src="images/event-bitka.jpg" width="800" height="533" alt="Armored knights re-enacting the Battle of Samobor" loading="lazy">
+            <img src="images/event-bitka.webp" width="800" height="533" alt="Armored knights re-enacting the Battle of Samobor" loading="lazy" srcset="images/event-bitka-480.webp 480w, images/event-bitka-640.webp 640w, images/event-bitka.webp 800w" sizes="(max-width: 700px) 640px, (max-width: 1200px) 100vw, 1150px">
             <div class="show-overlay">
               <p class="when">March 1st</p>
               <h3>Battle of Samobor</h3>
@@ -266,7 +265,7 @@
 
         <div class="swiper-slide">
           <article class="show-card">
-            <img src="images/event-greblica.jpg" width="800" height="533" alt="Rudarska greblica, a traditional cheese cake" loading="lazy">
+            <img src="images/event-greblica.webp" width="800" height="533" alt="Rudarska greblica, a traditional cheese cake" loading="lazy" srcset="images/event-greblica-480.webp 480w, images/event-greblica-640.webp 640w, images/event-greblica.webp 800w" sizes="(max-width: 700px) 640px, (max-width: 1200px) 100vw, 1150px">
             <div class="show-overlay">
               <p class="when">First weekend of July</p>
               <h3>Rudarska greblica — Miners Cake's Days</h3>
@@ -278,7 +277,7 @@
 
         <div class="swiper-slide">
           <article class="show-card">
-            <img src="images/event-dan-grada.jpg" width="800" height="533" alt="Parade on the Day of the Town of Samobor" loading="lazy">
+            <img src="images/event-dan-grada.webp" width="800" height="533" alt="Parade on the Day of the Town of Samobor" loading="lazy" srcset="images/event-dan-grada-480.webp 480w, images/event-dan-grada-640.webp 640w, images/event-dan-grada.webp 800w" sizes="(max-width: 700px) 640px, (max-width: 1200px) 100vw, 1150px">
             <div class="show-overlay">
               <p class="when">Third weekend of October</p>
               <h3>Day of the Town of Samobor</h3>
@@ -290,7 +289,7 @@
 
         <div class="swiper-slide">
           <article class="show-card">
-            <img src="images/event-salamijada.jpg" width="800" height="533" alt="Sliced Samobor salami" loading="lazy">
+            <img src="images/event-salamijada.webp" width="800" height="533" alt="Sliced Samobor salami" loading="lazy" srcset="images/event-salamijada-480.webp 480w, images/event-salamijada-640.webp 640w, images/event-salamijada.webp 800w" sizes="(max-width: 700px) 640px, (max-width: 1200px) 100vw, 1150px">
             <div class="show-overlay">
               <p class="when">International event</p>
               <h3>Samobor Salami Day</h3>
@@ -328,7 +327,7 @@
       <div class="swiper-wrapper">
         <div class="swiper-slide">
           <article class="show-card">
-            <img src="images/akt-planinarenje.jpg" width="800" height="533" alt="Green slopes of the Samobor hills" loading="lazy">
+            <img src="images/akt-planinarenje.webp" width="800" height="533" alt="Green slopes of the Samobor hills" loading="lazy" srcset="images/akt-planinarenje-480.webp 480w, images/akt-planinarenje-640.webp 640w, images/akt-planinarenje.webp 800w" sizes="(max-width: 700px) 640px, (max-width: 1200px) 100vw, 1150px">
             <div class="show-overlay">
               <h3>Hiking</h3>
               <p class="excerpt">If one is a big fan of hiking and loves exploring the nature Samobor is a right place for that. The hills of Samobor and Žumberak have interwoven network of walking and hiking marked trails.</p>
@@ -339,7 +338,7 @@
 
         <div class="swiper-slide">
           <article class="show-card">
-            <img src="images/akt-biciklizam.jpg" width="800" height="533" alt="Cyclist on a forest trail" loading="lazy">
+            <img src="images/akt-biciklizam.webp" width="800" height="533" alt="Cyclist on a forest trail" loading="lazy" srcset="images/akt-biciklizam-480.webp 480w, images/akt-biciklizam-640.webp 640w, images/akt-biciklizam.webp 800w" sizes="(max-width: 700px) 640px, (max-width: 1200px) 100vw, 1150px">
             <div class="show-overlay">
               <h3>Cycling</h3>
               <p class="excerpt">Samobor is also known for its bicycle trails organized and marked by numbers from 1 to 4. Highlands of Samobor is an excellent location for mountain biking.</p>
@@ -350,7 +349,7 @@
 
         <div class="swiper-slide">
           <article class="show-card">
-            <img src="images/akt-jahanje.jpg" width="800" height="533" alt="Horse in a meadow" loading="lazy">
+            <img src="images/akt-jahanje.webp" width="800" height="533" alt="Horse in a meadow" loading="lazy">
             <div class="show-overlay">
               <h3>Horseback riding</h3>
               <p class="excerpt">If you are a big fan of horseback riding our little town offers that activity as well. Molvice valley is the right place for you — no foreknowledge about horses needed, just the will to try.</p>
@@ -361,7 +360,7 @@
 
         <div class="swiper-slide">
           <article class="show-card">
-            <img src="images/akt-motori.jpg" width="800" height="533" alt="Motorcyclist on the road" loading="lazy">
+            <img src="images/akt-motori.webp" width="800" height="533" alt="Motorcyclist on the road" loading="lazy">
             <div class="show-overlay">
               <h3>Motorcycle tours</h3>
               <p class="excerpt">Indescribable beauty is hidden in the town of Samobor. This little town can be experienced and explored in a number of ways, including the motorcycle tours.</p>
@@ -372,7 +371,7 @@
 
         <div class="swiper-slide">
           <article class="show-card">
-            <img src="images/akt-strelicarstvo.jpg" width="800" height="533" alt="Archer aiming at a target" loading="lazy">
+            <img src="images/akt-strelicarstvo.webp" width="800" height="533" alt="Archer aiming at a target" loading="lazy" srcset="images/akt-strelicarstvo-480.webp 480w, images/akt-strelicarstvo-640.webp 640w, images/akt-strelicarstvo.webp 800w" sizes="(max-width: 700px) 640px, (max-width: 1200px) 100vw, 1150px">
             <div class="show-overlay">
               <h3>Archery</h3>
               <p class="excerpt">Citizens of Samobor and visitors of this beautiful small town got the chance to enjoy yet another sport – archery. Archery Club Samobor was founded ten years ago.</p>
@@ -394,21 +393,21 @@
 
     <div class="service-grid">
       <a class="service-card" href="https://kombi-samobor.com/en/" target="_blank" rel="noopener">
-        <img src="images/usluga-kombi.jpg" width="1280" height="960" alt="White Ford Transit Custom van" loading="lazy">
+        <img src="images/usluga-kombi.webp" width="1280" height="960" alt="White Ford Transit Custom van" loading="lazy" srcset="images/usluga-kombi-480.webp 480w, images/usluga-kombi-640.webp 640w, images/usluga-kombi-960.webp 960w, images/usluga-kombi.webp 1280w" sizes="(max-width: 900px) 100vw, 740px">
         <span class="service-overlay">
           <span class="kicker">Van rental</span>
           <h3>Rent Kombi</h3>
         </span>
       </a>
       <a class="service-card" href="https://camper-samobor.com/home/" target="_blank" rel="noopener">
-        <img src="images/usluga-kamper.jpg" width="1620" height="1080" alt="Camper interior with seating area and table" loading="lazy">
+        <img src="images/usluga-kamper.webp" width="1620" height="1080" alt="Camper interior with seating area and table" loading="lazy" srcset="images/usluga-kamper-480.webp 480w, images/usluga-kamper-640.webp 640w, images/usluga-kamper-960.webp 960w, images/usluga-kamper.webp 1600w" sizes="(max-width: 900px) 100vw, 740px">
         <span class="service-overlay">
           <span class="kicker">Camper rental</span>
           <h3>Rent Kamper</h3>
         </span>
       </a>
       <a class="service-card" href="https://www.sobe-samobor.biz/" target="_blank" rel="noopener">
-        <img src="images/usluga-sobe-medved.jpg" width="500" height="333" alt="Sobe Medved guest house in Samobor" loading="lazy">
+        <img src="images/usluga-sobe-medved.webp" width="500" height="333" alt="Sobe Medved guest house in Samobor" loading="lazy">
         <span class="service-overlay">
           <span class="kicker">Accommodation</span>
           <h3>Sobe Medved</h3>

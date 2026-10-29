@@ -11,14 +11,13 @@
 <meta name="theme-color" content="#C2571F">
 <title>Aktivnosti u Samoboru — Hostel Samobor</title>
 <meta name="description" content="Aktivnosti u Samoboru i okolici — planinarenje, biciklizam, jahanje, vožnja motorima i streličarstvo.">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400..700;1,9..144,400..700&family=Karla:wght@400;600;700;800&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="css/swiper-bundle.min.css">
-<link rel="stylesheet" href="css/style.css?v=2">
-<script src="js/swiper-bundle.min.js" defer></script>
-<script src="js/showcase.js" defer></script>
-<script src="js/nav.js" defer></script>
+<link rel="preload" href="css/fonts/karla-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="css/fonts/fraunces-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="css/swiper-bundle.min.css?v=3">
+<link rel="stylesheet" href="css/style.css?v=3">
+<script src="js/swiper-bundle.min.js?v=3" defer></script>
+<script src="js/showcase.js?v=3" defer></script>
+<script src="js/nav.js?v=3" defer></script>
 </head>
 <body>
 
@@ -64,7 +63,7 @@
       <div class="swiper-wrapper">
         <div class="swiper-slide">
           <article class="show-card">
-            <img src="images/akt-planinarenje.jpg" width="800" height="533" alt="Zeleni obronci Samoborskog gorja" loading="lazy">
+            <img fetchpriority="high" src="images/akt-planinarenje.webp" width="800" height="533" alt="Zeleni obronci Samoborskog gorja" srcset="images/akt-planinarenje-480.webp 480w, images/akt-planinarenje-640.webp 640w, images/akt-planinarenje.webp 800w" sizes="(max-width: 700px) 640px, (max-width: 1200px) 100vw, 1150px">
             <div class="show-overlay">
               <h2>Planinarenje</h2>
               <p class="excerpt">Ukoliko ste veliki ljubitelj planinarenja i volite istraživati prirodu tada je grad Samobor pravo mjesto za to. Samoborsko gorje i Žumberak isprepleteni su mrežom planinarskih putova.</p>
@@ -75,7 +74,7 @@
 
         <div class="swiper-slide">
           <article class="show-card">
-            <img src="images/akt-biciklizam.jpg" width="800" height="533" alt="Biciklist na šumskoj stazi" loading="lazy">
+            <img src="images/akt-biciklizam.webp" width="800" height="533" alt="Biciklist na šumskoj stazi" loading="lazy" srcset="images/akt-biciklizam-480.webp 480w, images/akt-biciklizam-640.webp 640w, images/akt-biciklizam.webp 800w" sizes="(max-width: 700px) 640px, (max-width: 1200px) 100vw, 1150px">
             <div class="show-overlay">
               <h2>Biciklizam</h2>
               <p class="excerpt">Samobor je poznat i po biciklističkim stazama koje su organizirane i označene brojevima od 1 do 4. Samoborsko gorje odlična je lokacija za brdski biciklizam.</p>
@@ -86,7 +85,7 @@
 
         <div class="swiper-slide">
           <article class="show-card">
-            <img src="images/akt-jahanje.jpg" width="800" height="533" alt="Konj na livadi" loading="lazy">
+            <img src="images/akt-jahanje.webp" width="800" height="533" alt="Konj na livadi" loading="lazy">
             <div class="show-overlay">
               <h2>Jahanje</h2>
               <p class="excerpt">Ukoliko ste veliki ljubitelj konja i volite jahati, naš mali gradić nudi vam i tu aktivnost. Dolina Molvice pravo je mjesto za vas — nije vam potrebno nikakvo znanje, samo volja.</p>
@@ -97,7 +96,7 @@
 
         <div class="swiper-slide">
           <article class="show-card">
-            <img src="images/akt-motori.jpg" width="800" height="533" alt="Motociklist na cesti" loading="lazy">
+            <img src="images/akt-motori.webp" width="800" height="533" alt="Motociklist na cesti" loading="lazy">
             <div class="show-overlay">
               <h2>Vožnja motorima</h2>
               <p class="excerpt">Grad Samobor krije neopisivu ljepotu. Ovaj mali samozatajni gradić možete doživjeti i razgledati na brojne načine, a među njima i moto turama.</p>
@@ -108,7 +107,7 @@
 
         <div class="swiper-slide">
           <article class="show-card">
-            <img src="images/akt-strelicarstvo.jpg" width="800" height="533" alt="Streličar gađa metu" loading="lazy">
+            <img src="images/akt-strelicarstvo.webp" width="800" height="533" alt="Streličar gađa metu" loading="lazy" srcset="images/akt-strelicarstvo-480.webp 480w, images/akt-strelicarstvo-640.webp 640w, images/akt-strelicarstvo.webp 800w" sizes="(max-width: 700px) 640px, (max-width: 1200px) 100vw, 1150px">
             <div class="show-overlay">
               <h2>Streličarstvo</h2>
               <p class="excerpt">Samoborci i svi gosti ovog prekrasnog malog grada dobili su priliku uživati u još jednom sportu - streličarstvu. Streličarski klub Samobor osnovan je prije deset godina.</p>
